@@ -84,11 +84,11 @@ struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
 /** @brief Frees the Pointer returned by a previous successful call to mem_to_msg
  *
  * @detail NOTE: This function should only be called on a pointer previously returned by mem_to_msg
- * @detail This function takes a double pointer so that it can free the inner pointer and set it to NULL
+ * This function takes a double pointer so that it can free the inner pointer and set it to NULL
  *
  * @param[in] msg A double pointer with the inner pointer being the previously allocated structure
 */
-void free_mem_to_msg(struct proto_msg *msg);
+void free_mem_to_msg(struct proto_msg **msg);
 
 
 /** @brief this function gets a variable encoded 64 bit integer
@@ -104,7 +104,7 @@ __u8 get_var_int(const u_char *data, __u64 *varint);
 /** @brief Frees the Pointer returned by a previous successful call to read_bgp_prefix
  *
  *  @detail NOTE: This function should only be called on a pointer previously returned by read_bgp_prefix
- *  @detail This function takes a double pointer so that it can free the inner pointer and set it to NULL
+ *  This function takes a double pointer so that it can free the inner pointer and set it to NULL
  *
  * @param[in] prefix A double pointer with the inner pointer being the previously allocated structure
 */
