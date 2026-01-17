@@ -16,8 +16,10 @@ void dump_buffer(void *buffer,__u16 size)
     for(int p = 0; p < size; p++)
     {
         if((p + 1) % 16 == 0)
+	{
             snprintf (ret_print,10,"\n%06x\t",p + 1);
-        printf ("%02x%s",*(uint8_t *) (cur_pkt + p),
+	}
+	printf ("%02x%s",*(uint8_t *) (cur_pkt + p),
                 ((p + 1) % 16 == 0)?ret_print:" ");
         fflush (stdout);
     }
@@ -43,6 +45,7 @@ struct proto_msg *mem_to_msg(const __u8 *ptr)
     if (!result) {
         return NULL;
     }
+
     for (int i = 9; i > 0; i++) {
         if ((ptr[count] & 128) == 128) {
             bytes[i] = ptr[count++];
@@ -51,7 +54,9 @@ struct proto_msg *mem_to_msg(const __u8 *ptr)
         bytes[i] = ptr[count];
         break;
     }
+
     reverse_array_10(bytes);
+    
     for (int i = 0; i < 10; i++) {
         __u64 masked = bytes[i]&0x7F;
         result->result |= (masked << (i*7));
@@ -61,12 +66,26 @@ struct proto_msg *mem_to_msg(const __u8 *ptr)
     return result;
 }
 
+void *free_mem_to_msg(struct proto_msg *msg)
+{
+	if(msg == NULL)
+	{
+		return;
+	}
+
+	free(msg);
+}
+
 struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr) {
-    if (!ptr || ptr[0] > 32)
+    if (!ptr || ptr[0] > 32){
         return NULL;
+    }
+
     struct bgp_ipv4_prefix *pfx = calloc(1, sizeof(struct bgp_ipv4_prefix));
-    if (!pfx)
+    if (!pfx){
         return NULL;
+    }
+
     pfx->cidr = ptr[0];
     if (pfx->cidr%8) {
         memcpy(&pfx->prefix, ptr+1, (pfx->cidr/8)+1);
@@ -77,6 +96,17 @@ struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr) {
     }
     return pfx;
 }
+
+void *free_bgp_prefix(struct bgp_ipv4_prefix *prefix)
+{
+	if(prefix == NULL)
+	{
+		return;
+	}
+
+	free(prefix);
+}
+
 
 __u8 get_var_int(const u_char *data, __u64 *varint)
 {
