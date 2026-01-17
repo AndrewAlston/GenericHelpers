@@ -23,4 +23,5 @@ doxygen_add_docs(docs ALL COMMENT "Generating Doxygen Documentation")
 add_dependencies(docs generichelper)
 add_library(generichelper SHARED
         decode_helpers.c
-        decode_helpers.h)
+        decode_helpers.h
+        decode_helpers.c)

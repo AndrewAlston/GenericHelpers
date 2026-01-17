@@ -22,3 +22,14 @@ void dump_buffer(void *buffer,__u16 size)
     printf ("\n\n");
     fflush (stdout);
 }
+
+void reverse_array_10(__u8 bytes[])
+{
+    __u8 size = 10;
+    for(int i = 0; i < size/2; i++) {
+        __u8 temp = bytes[i];
+        bytes[i] = bytes[size-1-i];
+        bytes[size-1-i] = temp;
+    }
+}
+
