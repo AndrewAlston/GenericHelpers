@@ -10,10 +10,8 @@ learn and understand.
 Because of the doxygen configurations building this requires having texlive and pdflatex installed
 (On Ubuntu texlive-latext-base texlive-latex-extra texlive-latex-recommended and pdflatex packages)
 
-To build with ninja:
-
-cmake -G Ninja .
-ninja
+To build it is suggested using the build_with_docs.sh script that will re-generate all the documentation,
+saving having to run make in docs/latex as described below.
 
 In docs/latex there is a Makefile, and running make in docs/latex after running ninja will generate a refman.pdf
 pdf reference manual.  Note that this requires pdflatex to be installed 
