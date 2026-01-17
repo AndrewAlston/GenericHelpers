@@ -5,7 +5,7 @@ project(generichelper C)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -g3")
-set(DOXYGEN_PROJECT_NAME "Protocol Buffer to Influx")
+set(DOXYGEN_PROJECT_NAME "Generic helper / demonstration library")
 set(DOXYGEN_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/docs)
 set(DOXYGEN_GENERATE_HTML YES)
 set(DOXYGEN_RECURSIVE YES)
