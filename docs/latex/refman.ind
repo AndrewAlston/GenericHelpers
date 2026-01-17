@@ -51,26 +51,31 @@
 
   \indexspace
 
-  \item {insert\_tree4}
+  \item {init\_tree4}
     \subitem {linked\_list.c}, \hyperpage{19}
+    \subitem {linked\_list.h}, \hyperpage{22}
+  \item {insert\_tree4}
+    \subitem {linked\_list.c}, \hyperpage{20}
   \item {insert\_trie4}
     \subitem {linked\_list.h}, \hyperpage{22}
 
   \indexspace
 
   \item {linked\_list.c}, \hyperpage{19}
-    \subitem {insert\_tree4}, \hyperpage{19}
-    \subitem {lookup\_exact}, \hyperpage{19}
+    \subitem {init\_tree4}, \hyperpage{19}
+    \subitem {insert\_tree4}, \hyperpage{20}
+    \subitem {lookup\_exact}, \hyperpage{20}
     \subitem {lookup\_lpm}, \hyperpage{20}
-    \subitem {remove\_node}, \hyperpage{20}
-  \item {linked\_list.h}, \hyperpage{21}
+    \subitem {remove\_node}, \hyperpage{21}
+  \item {linked\_list.h}, \hyperpage{22}
+    \subitem {init\_tree4}, \hyperpage{22}
     \subitem {insert\_trie4}, \hyperpage{22}
-    \subitem {lookup\_exact}, \hyperpage{22}
+    \subitem {lookup\_exact}, \hyperpage{23}
     \subitem {lookup\_lpm}, \hyperpage{23}
-    \subitem {remove\_node}, \hyperpage{23}
+    \subitem {remove\_node}, \hyperpage{24}
   \item {lookup\_exact}
-    \subitem {linked\_list.c}, \hyperpage{19}
-    \subitem {linked\_list.h}, \hyperpage{22}
+    \subitem {linked\_list.c}, \hyperpage{20}
+    \subitem {linked\_list.h}, \hyperpage{23}
   \item {lookup\_lpm}
     \subitem {linked\_list.c}, \hyperpage{20}
     \subitem {linked\_list.h}, \hyperpage{23}
@@ -108,8 +113,8 @@
     \subitem {decode\_helpers.h}, \hyperpage{18}
   \item {README.md}, \hyperpage{24}
   \item {remove\_node}
-    \subitem {linked\_list.c}, \hyperpage{20}
-    \subitem {linked\_list.h}, \hyperpage{23}
+    \subitem {linked\_list.c}, \hyperpage{21}
+    \subitem {linked\_list.h}, \hyperpage{24}
   \item {result}
     \subitem {proto\_msg}, \hyperpage{8}
   \item {reverse\_array\_10}

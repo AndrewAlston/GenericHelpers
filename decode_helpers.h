@@ -86,7 +86,7 @@ struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
  *  NOTE: This function should only be called on a pointer previously returned by mem_to_msg
  *
 */
-void *free_mem_to_msg(struct proto_msg *msg);
+void free_mem_to_msg(struct proto_msg *msg);
 
 
 /** @brief this function gets a variable encoded 64 bit integer
@@ -104,7 +104,7 @@ __u8 get_var_int(const u_char *data, __u64 *varint);
  *  NOTE: This function should only be called on a pointer previously returned by read_bgp_prefix
  *
 */
-void *free_bgp_prefix(struct bgp_ipv4_prefix *prefix);
+void free_bgp_prefix(struct bgp_ipv4_prefix *prefix);
 
 
 #endif //GENERICHELPER_DECODE_HELPERS_H

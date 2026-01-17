@@ -65,6 +65,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a8039c47f44e43b60d48281b765e115dd"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structroute4tree.html">route4tree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#a8039c47f44e43b60d48281b765e115dd">init_tree4</a> (void)</td></tr>
+<tr class="memdesc:a8039c47f44e43b60d48281b765e115dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a binary tree head entry.  <a href="linked__list_8h.html#a8039c47f44e43b60d48281b765e115dd">More...</a><br /></td></tr>
+<tr class="separator:a8039c47f44e43b60d48281b765e115dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84fc197413e0c247730c2d500200ddc8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structroute4tree.html">route4tree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#a84fc197413e0c247730c2d500200ddc8">insert_trie4</a> (struct <a class="el" href="structroute4tree.html">route4tree</a> *tree, __u32 addr, __u8 cidr, void *data)</td></tr>
 <tr class="memdesc:a84fc197413e0c247730c2d500200ddc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This inserts an entry into a binary tree.  <a href="linked__list_8h.html#a84fc197413e0c247730c2d500200ddc8">More...</a><br /></td></tr>
 <tr class="separator:a84fc197413e0c247730c2d500200ddc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -79,6 +82,27 @@ Functions</h2></td></tr>
 <tr class="separator:adcb6ddddd0010e932c2c8d7057cb6444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a8039c47f44e43b60d48281b765e115dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8039c47f44e43b60d48281b765e115dd">&#9670;&nbsp;</a></span>init_tree4()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structroute4tree.html">route4tree</a>* init_tree4 </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a binary tree head entry. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the head of a binary tree </dd></dl>
+
+</div>
+</div>
 <a id="a84fc197413e0c247730c2d500200ddc8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84fc197413e0c247730c2d500200ddc8">&#9670;&nbsp;</a></span>insert_trie4()</h2>
 
@@ -118,7 +142,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This inserts an entry into a binary tree. </p>
-<p>Data is a void pointer making this generic and able to store any data in the tree. It should be noted that the tree must be initialized before first insertion using init_tree4(); </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Data is a void pointer making this generic and able to store any data in the tree. It should be noted that the tree must be initialized before first insertion using <a class="el" href="linked__list_8h.html#a8039c47f44e43b60d48281b765e115dd" title="Initialize a binary tree head entry.">init_tree4()</a>; </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>An initialized binary tree </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>A 32 bit address to be inserted into the tree </td></tr>

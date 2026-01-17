@@ -1,5 +1,5 @@
 #!/bin/bash
-cmake -G ninja .
+cmake -G Ninja .
 ninja clean
 ninja
 cd docs/latex

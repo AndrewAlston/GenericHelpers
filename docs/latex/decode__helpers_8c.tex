@@ -21,11 +21,11 @@ void \mbox{\hyperlink{decode__helpers_8c_a298daf8160cdf855a5ae27d4fb55b405}{reve
 \begin{DoxyCompactList}\small\item\em This function reverses a 10 byte array. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$ \mbox{\hyperlink{decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0}{mem\+\_\+to\+\_\+msg}} (const \+\_\+\+\_\+u8 $\ast$ptr)
 \begin{DoxyCompactList}\small\item\em This function is used to decode protobuf messages and message types. \end{DoxyCompactList}\item 
-void $\ast$ \mbox{\hyperlink{decode__helpers_8c_abff66d59a5640fe183eb927c4e94ff8b}{free\+\_\+mem\+\_\+to\+\_\+msg}} (struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$msg)
+void \mbox{\hyperlink{decode__helpers_8c_a3890c9c330276cddc2d5d865647f8344}{free\+\_\+mem\+\_\+to\+\_\+msg}} (struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$msg)
 \begin{DoxyCompactList}\small\item\em Frees the Pointer returned by a previous successful call to mem\+\_\+to\+\_\+msg. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$ \mbox{\hyperlink{decode__helpers_8c_a3edfbd2b78d141f355c240b7b1f52e18}{read\+\_\+bgp\+\_\+prefix}} (\+\_\+\+\_\+u8 $\ast$ptr)
 \begin{DoxyCompactList}\small\item\em Reads a BGP encoded prefix from an NLRI or withdraw message. \end{DoxyCompactList}\item 
-void $\ast$ \mbox{\hyperlink{decode__helpers_8c_ae3a3cbd7217788912d4b6188c7ef9c40}{free\+\_\+bgp\+\_\+prefix}} (struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$prefix)
+void \mbox{\hyperlink{decode__helpers_8c_af46566b58f87421d807e4a651f8fff14}{free\+\_\+bgp\+\_\+prefix}} (struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$prefix)
 \begin{DoxyCompactList}\small\item\em Frees the Pointer returned by a previous successful call to read\+\_\+bgp\+\_\+prefix. \end{DoxyCompactList}\item 
 \+\_\+\+\_\+u8 \mbox{\hyperlink{decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11ef67975}{get\+\_\+var\+\_\+int}} (const u\+\_\+char $\ast$data, \+\_\+\+\_\+u64 $\ast$varint)
 \begin{DoxyCompactList}\small\item\em this function gets a variable encoded 64 bit integer from a 7 byte encoded string of bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -49,21 +49,21 @@ This function dumps memory in a format that is importable by wireshark or other 
 \mbox{\texttt{ in}}  & {\em size} & The number of bytes to dump \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{decode__helpers_8c_ae3a3cbd7217788912d4b6188c7ef9c40}\label{decode__helpers_8c_ae3a3cbd7217788912d4b6188c7ef9c40}} 
+\mbox{\Hypertarget{decode__helpers_8c_af46566b58f87421d807e4a651f8fff14}\label{decode__helpers_8c_af46566b58f87421d807e4a651f8fff14}} 
 \index{decode\_helpers.c@{decode\_helpers.c}!free\_bgp\_prefix@{free\_bgp\_prefix}}
 \index{free\_bgp\_prefix@{free\_bgp\_prefix}!decode\_helpers.c@{decode\_helpers.c}}
 \doxysubsubsection{\texorpdfstring{free\_bgp\_prefix()}{free\_bgp\_prefix()}}
-{\footnotesize\ttfamily void$\ast$ free\+\_\+bgp\+\_\+prefix (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$}]{prefix }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+bgp\+\_\+prefix (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$}]{prefix }\end{DoxyParamCaption})}
 
 
 
 Frees the Pointer returned by a previous successful call to read\+\_\+bgp\+\_\+prefix. 
 
-NOTE\+: This function should only be called on a pointer previously returned by read\+\_\+bgp\+\_\+prefix \mbox{\Hypertarget{decode__helpers_8c_abff66d59a5640fe183eb927c4e94ff8b}\label{decode__helpers_8c_abff66d59a5640fe183eb927c4e94ff8b}} 
+NOTE\+: This function should only be called on a pointer previously returned by read\+\_\+bgp\+\_\+prefix \mbox{\Hypertarget{decode__helpers_8c_a3890c9c330276cddc2d5d865647f8344}\label{decode__helpers_8c_a3890c9c330276cddc2d5d865647f8344}} 
 \index{decode\_helpers.c@{decode\_helpers.c}!free\_mem\_to\_msg@{free\_mem\_to\_msg}}
 \index{free\_mem\_to\_msg@{free\_mem\_to\_msg}!decode\_helpers.c@{decode\_helpers.c}}
 \doxysubsubsection{\texorpdfstring{free\_mem\_to\_msg()}{free\_mem\_to\_msg()}}
-{\footnotesize\ttfamily void$\ast$ free\+\_\+mem\+\_\+to\+\_\+msg (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$}]{msg }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void free\+\_\+mem\+\_\+to\+\_\+msg (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$}]{msg }\end{DoxyParamCaption})}
 
 
 

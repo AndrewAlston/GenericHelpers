@@ -88,15 +88,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a3edfbd2b78d141f355c240b7b1f52e18"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbgp__ipv4__prefix.html">bgp_ipv4_prefix</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decode__helpers_8h.html#a3edfbd2b78d141f355c240b7b1f52e18">read_bgp_prefix</a> (__u8 *ptr)</td></tr>
 <tr class="memdesc:a3edfbd2b78d141f355c240b7b1f52e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a BGP encoded prefix from an NLRI or withdraw message.  <a href="decode__helpers_8h.html#a3edfbd2b78d141f355c240b7b1f52e18">More...</a><br /></td></tr>
 <tr class="separator:a3edfbd2b78d141f355c240b7b1f52e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abff66d59a5640fe183eb927c4e94ff8b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decode__helpers_8h.html#abff66d59a5640fe183eb927c4e94ff8b">free_mem_to_msg</a> (struct <a class="el" href="structproto__msg.html">proto_msg</a> *msg)</td></tr>
-<tr class="memdesc:abff66d59a5640fe183eb927c4e94ff8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the Pointer returned by a previous successful call to mem_to_msg.  <a href="decode__helpers_8h.html#abff66d59a5640fe183eb927c4e94ff8b">More...</a><br /></td></tr>
-<tr class="separator:abff66d59a5640fe183eb927c4e94ff8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3890c9c330276cddc2d5d865647f8344"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decode__helpers_8h.html#a3890c9c330276cddc2d5d865647f8344">free_mem_to_msg</a> (struct <a class="el" href="structproto__msg.html">proto_msg</a> *msg)</td></tr>
+<tr class="memdesc:a3890c9c330276cddc2d5d865647f8344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the Pointer returned by a previous successful call to mem_to_msg.  <a href="decode__helpers_8h.html#a3890c9c330276cddc2d5d865647f8344">More...</a><br /></td></tr>
+<tr class="separator:a3890c9c330276cddc2d5d865647f8344"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf62cf9fd7a378b8e7e6c5e11ef67975"><td class="memItemLeft" align="right" valign="top">__u8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decode__helpers_8h.html#aaf62cf9fd7a378b8e7e6c5e11ef67975">get_var_int</a> (const u_char *data, __u64 *varint)</td></tr>
 <tr class="memdesc:aaf62cf9fd7a378b8e7e6c5e11ef67975"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function gets a variable encoded 64 bit integer from a 7 byte encoded string of bytes.  <a href="decode__helpers_8h.html#aaf62cf9fd7a378b8e7e6c5e11ef67975">More...</a><br /></td></tr>
 <tr class="separator:aaf62cf9fd7a378b8e7e6c5e11ef67975"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3a3cbd7217788912d4b6188c7ef9c40"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decode__helpers_8h.html#ae3a3cbd7217788912d4b6188c7ef9c40">free_bgp_prefix</a> (struct <a class="el" href="structbgp__ipv4__prefix.html">bgp_ipv4_prefix</a> *prefix)</td></tr>
-<tr class="memdesc:ae3a3cbd7217788912d4b6188c7ef9c40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the Pointer returned by a previous successful call to read_bgp_prefix.  <a href="decode__helpers_8h.html#ae3a3cbd7217788912d4b6188c7ef9c40">More...</a><br /></td></tr>
-<tr class="separator:ae3a3cbd7217788912d4b6188c7ef9c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46566b58f87421d807e4a651f8fff14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="decode__helpers_8h.html#af46566b58f87421d807e4a651f8fff14">free_bgp_prefix</a> (struct <a class="el" href="structbgp__ipv4__prefix.html">bgp_ipv4_prefix</a> *prefix)</td></tr>
+<tr class="memdesc:af46566b58f87421d807e4a651f8fff14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the Pointer returned by a previous successful call to read_bgp_prefix.  <a href="decode__helpers_8h.html#af46566b58f87421d807e4a651f8fff14">More...</a><br /></td></tr>
+<tr class="separator:af46566b58f87421d807e4a651f8fff14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a9df7d5bf99061b8754aad86196f71cde"></a>
@@ -136,14 +136,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae3a3cbd7217788912d4b6188c7ef9c40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3a3cbd7217788912d4b6188c7ef9c40">&#9670;&nbsp;</a></span>free_bgp_prefix()</h2>
+<a id="af46566b58f87421d807e4a651f8fff14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46566b58f87421d807e4a651f8fff14">&#9670;&nbsp;</a></span>free_bgp_prefix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* free_bgp_prefix </td>
+          <td class="memname">void free_bgp_prefix </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="structbgp__ipv4__prefix.html">bgp_ipv4_prefix</a> *&#160;</td>
           <td class="paramname"><em>prefix</em></td><td>)</td>
@@ -157,14 +157,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abff66d59a5640fe183eb927c4e94ff8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abff66d59a5640fe183eb927c4e94ff8b">&#9670;&nbsp;</a></span>free_mem_to_msg()</h2>
+<a id="a3890c9c330276cddc2d5d865647f8344"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3890c9c330276cddc2d5d865647f8344">&#9670;&nbsp;</a></span>free_mem_to_msg()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* free_mem_to_msg </td>
+          <td class="memname">void free_mem_to_msg </td>
           <td>(</td>
           <td class="paramtype">struct <a class="el" href="structproto__msg.html">proto_msg</a> *&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>

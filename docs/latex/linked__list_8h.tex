@@ -1,7 +1,6 @@
 \hypertarget{linked__list_8h}{}\doxysection{linked\+\_\+list.\+h File Reference}
 \label{linked__list_8h}\index{linked\_list.h@{linked\_list.h}}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -16,6 +15,8 @@ struct \mbox{\hyperlink{structroute4tree}{route4tree}}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_a8039c47f44e43b60d48281b765e115dd}{init\+\_\+tree4}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize a binary tree head entry. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_a84fc197413e0c247730c2d500200ddc8}{insert\+\_\+trie4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$data)
 \begin{DoxyCompactList}\small\item\em This inserts an entry into a binary tree. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_afbb768f4a8298bf1c98458904170e83c}{lookup\+\_\+lpm}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr)
@@ -27,6 +28,19 @@ void \mbox{\hyperlink{linked__list_8h_adcb6ddddd0010e932c2c8d7057cb6444}{remove\
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{linked__list_8h_a8039c47f44e43b60d48281b765e115dd}\label{linked__list_8h_a8039c47f44e43b60d48281b765e115dd}} 
+\index{linked\_list.h@{linked\_list.h}!init\_tree4@{init\_tree4}}
+\index{init\_tree4@{init\_tree4}!linked\_list.h@{linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{init\_tree4()}{init\_tree4()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ init\+\_\+tree4 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize a binary tree head entry. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the head of a binary tree 
+\end{DoxyReturn}
 \mbox{\Hypertarget{linked__list_8h_a84fc197413e0c247730c2d500200ddc8}\label{linked__list_8h_a84fc197413e0c247730c2d500200ddc8}} 
 \index{linked\_list.h@{linked\_list.h}!insert\_trie4@{insert\_trie4}}
 \index{insert\_trie4@{insert\_trie4}!linked\_list.h@{linked\_list.h}}
@@ -37,7 +51,7 @@ void \mbox{\hyperlink{linked__list_8h_adcb6ddddd0010e932c2c8d7057cb6444}{remove\
 
 This inserts an entry into a binary tree. 
 
-Data is a void pointer making this generic and able to store any data in the tree. It should be noted that the tree must be initialized before first insertion using init\+\_\+tree4(); 
+Data is a void pointer making this generic and able to store any data in the tree. It should be noted that the tree must be initialized before first insertion using \mbox{\hyperlink{linked__list_8h_a8039c47f44e43b60d48281b765e115dd}{init\+\_\+tree4()}}; 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em tree} & An initialized binary tree \\
 \hline

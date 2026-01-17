@@ -66,7 +66,7 @@ struct proto_msg *mem_to_msg(const __u8 *ptr)
     return result;
 }
 
-void *free_mem_to_msg(struct proto_msg *msg)
+void free_mem_to_msg(struct proto_msg *msg)
 {
 	if(msg == NULL)
 	{
@@ -97,13 +97,12 @@ struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr) {
     return pfx;
 }
 
-void *free_bgp_prefix(struct bgp_ipv4_prefix *prefix)
+void free_bgp_prefix(struct bgp_ipv4_prefix *prefix)
 {
 	if(prefix == NULL)
 	{
 		return;
 	}
-
 	free(prefix);
 }
 
