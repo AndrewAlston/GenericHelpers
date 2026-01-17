@@ -7,6 +7,16 @@
 
 #include <asm-generic/types.h>
 
+/** @def bgp_ipv4_prefix
+ * @brief This structure contains a prefix (in network byte order)
+ * and a CIDR for the prefix
+ */
+struct bgp_ipv4_prefix {
+    __u32 prefix; /**< The network byte order prefix read from a BGP NLRI */
+    __u8 cidr; /** The cidr of the prefix */
+    __u8 *next; /**< Pointer to the next entry NLRI entry */
+};
+
 /** @def proto_msg
  * @brief This structure contains elements used after decoding a protobuf string
  */
@@ -48,5 +58,24 @@ void reverse_array_10(__u8 bytes[]);
  * @returns An allocated proto_msg structure or NULL if allocation of memory fails
  */
 struct proto_msg *mem_to_msg(const __u8 *ptr);
+
+/** @brief Reads a BGP encoded prefix from an NLRI or withdraw message
+ * @sa bgp_ipv4_prefix
+ * @detail This function decodes compressed ipv4 prefix's as contained
+ * in bgp update messages.  The first byte in the message represents the
+ * CIDR mask (The number of bits in the prefix).
+ * If the CIDR is fully divisible by 8, then CIDR/8 bytes are copied
+ * into the prefix element.  If CIDR is NOT fully divisible by 8 then
+ * (CIDR/8)+1 bytes are copied into the prefix element.
+ * The next pointer element is set using the input pointer + 1 byte
+ * for the CIDR and then X bytes for the prefix itself, where X
+ * is either CIDR/8 or (CIDR/8)+1
+ * NOTE: This function returns a pointer that must be free'd by the caller
+ * to avoid memory leaks.  This function only serves for demonstration
+ * purposes because this type of processing would normally be done
+ * inline in a BGP update function without the need of additional
+ * memory allocation.
+*/
+struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
 
 #endif //GENERICHELPER_DECODE_HELPERS_H

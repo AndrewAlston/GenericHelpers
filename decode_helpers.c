@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <string.h>
 #include "decode_helpers.h"
 
 void dump_buffer(void *buffer,__u16 size)
@@ -58,4 +59,21 @@ struct proto_msg *mem_to_msg(const __u8 *ptr)
     result->msg_code = result->result>>3;
     result->msg_type = result->result&7;
     return result;
+}
+
+struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr) {
+    if (!ptr || ptr[0] > 32)
+        return NULL;
+    struct bgp_ipv4_prefix *pfx = calloc(1, sizeof(struct bgp_ipv4_prefix));
+    if (!pfx)
+        return NULL;
+    pfx->cidr = ptr[0];
+    if (pfx->cidr%8) {
+        memcpy(&pfx->prefix, ptr+1, (pfx->cidr/8)+1);
+        pfx->next = ptr+(pfx->cidr/8)+2;
+    } else {
+        memcpy(&pfx->prefix, ptr+1, pfx->cidr/8);
+        pfx->next = ptr+(pfx->cidr/8)+1;
+    }
+    return pfx;
 }
