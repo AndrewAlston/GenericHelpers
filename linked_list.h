@@ -1,0 +1,62 @@
+//
+// Created by andrew on 1/17/26.
+//
+
+#ifndef GENERICHELPER_LINKED_LIST_H
+#define GENERICHELPER_LINKED_LIST_H
+
+/** @bdef route4trie
+ * @brief The route4trie structure is used in the creation of a 32 bit binary tree
+ */
+struct route4tree {
+    struct route4tree *set; /**< Pointer used for when a binary bit is set */
+    struct route4tree *unset; /**< Pointer used for when a binary bit is not set */
+    struct route4tree *parent; /**< Pointer to the parent entry of the tree */
+    void *data; /**< Void pointer to data to be stored in the tree */
+};
+
+/** @brief This inserts an entry into a binary tree
+ * @details Data is a void pointer making this generic and able to store any data in the tree.
+ * It should be noted that the tree must be initialized before first insertion using
+ * init_tree4();
+ * @param[in] tree An initialized binary tree
+ * @param[in] addr A 32 bit address to be inserted into the tree
+ * @param[in] cidr An integer representing how many bits of the address to insert into the tree
+ * @param[in] data A void pointer to the data to insert into the tree
+ * @returns A route4tree structure at the inserted position in the tree
+ */
+struct route4tree *insert_trie4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data);
+
+/** @brief This does a longest prefix match against the binary tree
+ * @details This function will return at the deepest point in the tree that is matched
+ * and has data.  It is useful in the data pointer to store the actual prefix and cidr
+ * so that when this returns you can know exactly what has been matched.
+ * @param[in] tree The head of an initialized binary tree
+ * @param[in] addr A 32 bit address to be searched for in the tree
+ * @param[in] cidr The maximum number of bits to transverse to in the tree
+ * @returns A tree entry at the deepest point possible in the transversal
+ */
+struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr);
+
+/** @brief This does an exact match lookup against the tree
+ * @details This function will return the tree structure at the exact match point
+ * if it can transverse the tree to the depths represented by cidr and if data
+ * is present at the end of the transversal
+ * @param[in] tree The head of an initialized binary tree
+ * @param[in] addr An address to lookup in the tree
+ * @param[in] cidr The depth to transverse to in the tree
+ * @returns A pointer to the tree entry if matched, or NULL
+ */
+struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr);
+
+/** @brief This function removes a node from the tree
+ * @details This function will remove a node from the tree, and all empty
+ * parent nodes.  If a parent node still has children or data the function will cease
+ * the reverse transversal
+ * @param[in] tree The head of an initialized binary tree
+ * @param[in] address The address to lookup in the tree - This should be in big endian order
+ * @param[in] cidr The depth to transverse before we start back tracing and freeing
+ */
+void remove_node(struct route4tree *tree, __u32 address, __u8 cidr);
+
+#endif //GENERICHELPER_LINKED_LIST_H

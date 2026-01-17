@@ -24,4 +24,6 @@ add_dependencies(docs generichelper)
 add_library(generichelper SHARED
         decode_helpers.c
         decode_helpers.h
-        decode_helpers.c)
+        decode_helpers.c
+        linked_list.c
+        linked_list.h)

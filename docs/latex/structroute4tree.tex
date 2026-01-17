@@ -1,0 +1,69 @@
+\hypertarget{structroute4tree}{}\doxysection{route4tree Struct Reference}
+\label{structroute4tree}\index{route4tree@{route4tree}}
+
+
+The route4trie structure is used in the creation of a 32 bit binary tree.  
+
+
+
+
+{\ttfamily \#include $<$linked\+\_\+list.\+h$>$}
+
+
+
+Collaboration diagram for route4tree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{structroute4tree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{structroute4tree_a859ffd9589daa7e35ca2bdd2d42dcdc0}{set}}
+\item 
+struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{structroute4tree_aaa1c8328ca443203b72496440a4b8d85}{unset}}
+\item 
+struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{structroute4tree_a753b77a34283a46b0759b037a7cbc46d}{parent}}
+\item 
+void $\ast$ \mbox{\hyperlink{structroute4tree_a051f5eab0b8d55dd76f58164655a82e3}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The route4trie structure is used in the creation of a 32 bit binary tree. 
+
+@bdef route4trie 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structroute4tree_a051f5eab0b8d55dd76f58164655a82e3}\label{structroute4tree_a051f5eab0b8d55dd76f58164655a82e3}} 
+\index{route4tree@{route4tree}!data@{data}}
+\index{data@{data}!route4tree@{route4tree}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily void$\ast$ route4tree\+::data}
+
+Void pointer to data to be stored in the tree \mbox{\Hypertarget{structroute4tree_a753b77a34283a46b0759b037a7cbc46d}\label{structroute4tree_a753b77a34283a46b0759b037a7cbc46d}} 
+\index{route4tree@{route4tree}!parent@{parent}}
+\index{parent@{parent}!route4tree@{route4tree}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ route4tree\+::parent}
+
+Pointer to the parent entry of the tree \mbox{\Hypertarget{structroute4tree_a859ffd9589daa7e35ca2bdd2d42dcdc0}\label{structroute4tree_a859ffd9589daa7e35ca2bdd2d42dcdc0}} 
+\index{route4tree@{route4tree}!set@{set}}
+\index{set@{set}!route4tree@{route4tree}}
+\doxysubsubsection{\texorpdfstring{set}{set}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ route4tree\+::set}
+
+Pointer used for when a binary bit is set \mbox{\Hypertarget{structroute4tree_aaa1c8328ca443203b72496440a4b8d85}\label{structroute4tree_aaa1c8328ca443203b72496440a4b8d85}} 
+\index{route4tree@{route4tree}!unset@{unset}}
+\index{unset@{unset}!route4tree@{route4tree}}
+\doxysubsubsection{\texorpdfstring{unset}{unset}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ route4tree\+::unset}
+
+Pointer used for when a binary bit is not set 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{linked__list_8h}{linked\+\_\+list.\+h}}\end{DoxyCompactItemize}

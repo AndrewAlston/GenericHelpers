@@ -12,46 +12,74 @@
 
   \indexspace
 
-  \item {decode\_helpers.c}, \hyperpage{9}
-    \subitem {dump\_buffer}, \hyperpage{10}
-    \subitem {free\_bgp\_prefix}, \hyperpage{10}
-    \subitem {free\_mem\_to\_msg}, \hyperpage{10}
-    \subitem {get\_var\_int}, \hyperpage{10}
-    \subitem {mem\_to\_msg}, \hyperpage{11}
-    \subitem {read\_bgp\_prefix}, \hyperpage{12}
-    \subitem {reverse\_array\_10}, \hyperpage{12}
-  \item {decode\_helpers.h}, \hyperpage{13}
-    \subitem {dump\_buffer}, \hyperpage{14}
-    \subitem {free\_bgp\_prefix}, \hyperpage{14}
-    \subitem {free\_mem\_to\_msg}, \hyperpage{14}
-    \subitem {get\_var\_int}, \hyperpage{15}
-    \subitem {mem\_to\_msg}, \hyperpage{15}
-    \subitem {read\_bgp\_prefix}, \hyperpage{16}
-    \subitem {reverse\_array\_10}, \hyperpage{16}
+  \item {data}
+    \subitem {route4tree}, \hyperpage{9}
+  \item {decode\_helpers.c}, \hyperpage{11}
+    \subitem {dump\_buffer}, \hyperpage{12}
+    \subitem {free\_bgp\_prefix}, \hyperpage{12}
+    \subitem {free\_mem\_to\_msg}, \hyperpage{12}
+    \subitem {get\_var\_int}, \hyperpage{12}
+    \subitem {mem\_to\_msg}, \hyperpage{13}
+    \subitem {read\_bgp\_prefix}, \hyperpage{14}
+    \subitem {reverse\_array\_10}, \hyperpage{14}
+  \item {decode\_helpers.h}, \hyperpage{15}
+    \subitem {dump\_buffer}, \hyperpage{16}
+    \subitem {free\_bgp\_prefix}, \hyperpage{16}
+    \subitem {free\_mem\_to\_msg}, \hyperpage{16}
+    \subitem {get\_var\_int}, \hyperpage{17}
+    \subitem {mem\_to\_msg}, \hyperpage{17}
+    \subitem {read\_bgp\_prefix}, \hyperpage{18}
+    \subitem {reverse\_array\_10}, \hyperpage{18}
   \item {dump\_buffer}
-    \subitem {decode\_helpers.c}, \hyperpage{10}
-    \subitem {decode\_helpers.h}, \hyperpage{14}
+    \subitem {decode\_helpers.c}, \hyperpage{12}
+    \subitem {decode\_helpers.h}, \hyperpage{16}
 
   \indexspace
 
   \item {free\_bgp\_prefix}
-    \subitem {decode\_helpers.c}, \hyperpage{10}
-    \subitem {decode\_helpers.h}, \hyperpage{14}
+    \subitem {decode\_helpers.c}, \hyperpage{12}
+    \subitem {decode\_helpers.h}, \hyperpage{16}
   \item {free\_mem\_to\_msg}
-    \subitem {decode\_helpers.c}, \hyperpage{10}
-    \subitem {decode\_helpers.h}, \hyperpage{14}
+    \subitem {decode\_helpers.c}, \hyperpage{12}
+    \subitem {decode\_helpers.h}, \hyperpage{16}
 
   \indexspace
 
   \item {get\_var\_int}
-    \subitem {decode\_helpers.c}, \hyperpage{10}
-    \subitem {decode\_helpers.h}, \hyperpage{15}
+    \subitem {decode\_helpers.c}, \hyperpage{12}
+    \subitem {decode\_helpers.h}, \hyperpage{17}
+
+  \indexspace
+
+  \item {insert\_tree4}
+    \subitem {linked\_list.c}, \hyperpage{19}
+  \item {insert\_trie4}
+    \subitem {linked\_list.h}, \hyperpage{22}
+
+  \indexspace
+
+  \item {linked\_list.c}, \hyperpage{19}
+    \subitem {insert\_tree4}, \hyperpage{19}
+    \subitem {lookup\_exact}, \hyperpage{19}
+    \subitem {lookup\_lpm}, \hyperpage{20}
+    \subitem {remove\_node}, \hyperpage{20}
+  \item {linked\_list.h}, \hyperpage{21}
+    \subitem {insert\_trie4}, \hyperpage{22}
+    \subitem {lookup\_exact}, \hyperpage{22}
+    \subitem {lookup\_lpm}, \hyperpage{23}
+    \subitem {remove\_node}, \hyperpage{23}
+  \item {lookup\_exact}
+    \subitem {linked\_list.c}, \hyperpage{19}
+    \subitem {linked\_list.h}, \hyperpage{22}
+  \item {lookup\_lpm}
+    \subitem {linked\_list.c}, \hyperpage{20}
+    \subitem {linked\_list.h}, \hyperpage{23}
 
   \indexspace
 
   \item {mem\_to\_msg}
-    \subitem {decode\_helpers.c}, \hyperpage{11}
-    \subitem {decode\_helpers.h}, \hyperpage{15}
+    \subitem {decode\_helpers.c}, \hyperpage{13}
+    \subitem {decode\_helpers.h}, \hyperpage{17}
   \item {msg\_code}
     \subitem {proto\_msg}, \hyperpage{8}
   \item {msg\_type}
@@ -64,6 +92,8 @@
 
   \indexspace
 
+  \item {parent}
+    \subitem {route4tree}, \hyperpage{9}
   \item {prefix}
     \subitem {bgp\_ipv4\_prefix}, \hyperpage{7}
   \item {proto\_msg}, \hyperpage{8}
@@ -74,13 +104,31 @@
   \indexspace
 
   \item {read\_bgp\_prefix}
-    \subitem {decode\_helpers.c}, \hyperpage{12}
-    \subitem {decode\_helpers.h}, \hyperpage{16}
-  \item {README.md}, \hyperpage{17}
+    \subitem {decode\_helpers.c}, \hyperpage{14}
+    \subitem {decode\_helpers.h}, \hyperpage{18}
+  \item {README.md}, \hyperpage{24}
+  \item {remove\_node}
+    \subitem {linked\_list.c}, \hyperpage{20}
+    \subitem {linked\_list.h}, \hyperpage{23}
   \item {result}
     \subitem {proto\_msg}, \hyperpage{8}
   \item {reverse\_array\_10}
-    \subitem {decode\_helpers.c}, \hyperpage{12}
-    \subitem {decode\_helpers.h}, \hyperpage{16}
+    \subitem {decode\_helpers.c}, \hyperpage{14}
+    \subitem {decode\_helpers.h}, \hyperpage{18}
+  \item {route4tree}, \hyperpage{8}
+    \subitem {data}, \hyperpage{9}
+    \subitem {parent}, \hyperpage{9}
+    \subitem {set}, \hyperpage{9}
+    \subitem {unset}, \hyperpage{9}
+
+  \indexspace
+
+  \item {set}
+    \subitem {route4tree}, \hyperpage{9}
+
+  \indexspace
+
+  \item {unset}
+    \subitem {route4tree}, \hyperpage{9}
 
 \end{theindex}
