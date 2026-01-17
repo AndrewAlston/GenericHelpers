@@ -60,7 +60,7 @@ struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr)
 {
     struct route4tree *current = tree;
     for (int i = 0; i < cidr; i++) {
-        __u32 bit = (addr >> (31-1)&1);
+        __u32 bit = (addr >> (31-i)&1);
         if (bit) {
             if (current->set) {
                 current = current->set;
