@@ -75,6 +75,7 @@ struct proto_msg *mem_to_msg(const __u8 *ptr);
  * purposes because this type of processing would normally be done
  * inline in a BGP update function without the need of additional
  * memory allocation.
+ * @param[in] ptr A Pointer to the start of the compressed prefix
 */
 struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
 
