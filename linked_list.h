@@ -15,6 +15,11 @@ struct route4tree {
     void *data; /**< Void pointer to data to be stored in the tree */
 };
 
+/** @brief Initialize a binary tree head entry
+ * @returns A pointer to the head of a binary tree
+ */
+struct route4tree *init_tree4(void);
+
 /** @brief This inserts an entry into a binary tree
  * @details Data is a void pointer making this generic and able to store any data in the tree.
  * It should be noted that the tree must be initialized before first insertion using

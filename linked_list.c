@@ -6,6 +6,14 @@
 #include <asm-generic/types.h>
 #include "linked_list.h"
 
+struct route4tree *init_tree4(void)
+{
+    struct route4tree *tree = calloc(1, sizeof(struct route4tree));
+    if (!tree)
+        return NULL;
+    return tree;
+}
+
 struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data)
 {
     if (!data)
@@ -98,7 +106,7 @@ struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr)
 
 void remove_node(struct route4tree *tree, __u32 address, __u8 cidr)
 {
-    // Swap the address to li
+    // Swap the address to little endian order
     __u32 addr = __bswap_32(address);
     struct route4tree *current = tree;
     // Iterate to the last known entry;
