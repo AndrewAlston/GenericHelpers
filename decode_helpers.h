@@ -27,7 +27,7 @@ struct proto_msg {
 };
 
 /** @brief dump_buffer takes a pointer and dumps a specific number of bytes
- * @detail This function dumps memory in a format that is importable by wireshark or other
+ * @details This function dumps memory in a format that is importable by wireshark or other
  * programs that can import hex dumps
  * @param[in] buffer A pointer to the memory to be dumped
  * @param[in] size The number of bytes to dump
@@ -35,7 +35,7 @@ struct proto_msg {
 void dump_buffer(void *buffer,__u16 size);
 
 /** @brief This function reverses a 10 byte array
- * @detail This function is used primarily for handling variable integer decodes
+ * @details This function is used primarily for handling variable integer decodes
  * VARINT's are something used heavily in gbp file formats (Google protobuffers)
  * NOTE: This function assumes that the input array is at least 10 bytes long
  * and should the input array be less than 10 bytes this may cause unexpected
@@ -45,7 +45,7 @@ void dump_buffer(void *buffer,__u16 size);
 void reverse_array_10(__u8 bytes[]);
 
 /** @brief This function is used to decode protobuf messages and message types
- * @detail This function reads a maximum of 10 bytes of memory into an array,
+ * @details This function reads a maximum of 10 bytes of memory into an array,
  * terminating when one byte does not have its high order bit set.
  * It then reverses the array, and concatenates the byte array into a
  * single 64 bit integer, using only the low order 7 bits of each byte in the
@@ -61,7 +61,7 @@ struct proto_msg *mem_to_msg(const __u8 *ptr);
 
 /** @brief Reads a BGP encoded prefix from an NLRI or withdraw message
  * @sa bgp_ipv4_prefix
- * @detail This function decodes compressed ipv4 prefix's as contained
+ * @details This function decodes compressed ipv4 prefix's as contained
  * in bgp update messages.  The first byte in the message represents the
  * CIDR mask (The number of bits in the prefix).
  * If the CIDR is fully divisible by 8, then CIDR/8 bytes are copied
@@ -83,7 +83,7 @@ struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
 
 /** @brief Frees the Pointer returned by a previous successful call to mem_to_msg
  *
- * @detail NOTE: This function should only be called on a pointer previously returned by mem_to_msg
+ * @details NOTE: This function should only be called on a pointer previously returned by mem_to_msg
  * This function takes a double pointer so that it can free the inner pointer and set it to NULL
  *
  * @param[in] msg A double pointer with the inner pointer being the previously allocated structure
@@ -103,7 +103,7 @@ __u8 get_var_int(const u_char *data, __u64 *varint);
 
 /** @brief Frees the Pointer returned by a previous successful call to read_bgp_prefix
  *
- *  @detail NOTE: This function should only be called on a pointer previously returned by read_bgp_prefix
+ *  @details NOTE: This function should only be called on a pointer previously returned by read_bgp_prefix
  *  This function takes a double pointer so that it can free the inner pointer and set it to NULL
  *
  * @param[in] prefix A double pointer with the inner pointer being the previously allocated structure

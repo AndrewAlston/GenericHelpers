@@ -31,29 +31,29 @@
 \contentsline {subsubsection}{\numberline {5.1.1.4}get\_var\_int()}{13}{subsubsection.5.1.1.4}%
 \contentsline {subsubsection}{\numberline {5.1.1.5}mem\_to\_msg()}{13}{subsubsection.5.1.1.5}%
 \contentsline {subsubsection}{\numberline {5.1.1.6}read\_bgp\_prefix()}{14}{subsubsection.5.1.1.6}%
-\contentsline {subsubsection}{\numberline {5.1.1.7}reverse\_array\_10()}{15}{subsubsection.5.1.1.7}%
+\contentsline {subsubsection}{\numberline {5.1.1.7}reverse\_array\_10()}{14}{subsubsection.5.1.1.7}%
 \contentsline {section}{\numberline {5.2}decode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{15}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Function Documentation}{16}{subsection.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.1.1}dump\_buffer()}{16}{subsubsection.5.2.1.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.2}free\_bgp\_prefix()}{17}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}free\_bgp\_prefix()}{16}{subsubsection.5.2.1.2}%
 \contentsline {subsubsection}{\numberline {5.2.1.3}free\_mem\_to\_msg()}{17}{subsubsection.5.2.1.3}%
 \contentsline {subsubsection}{\numberline {5.2.1.4}get\_var\_int()}{17}{subsubsection.5.2.1.4}%
 \contentsline {subsubsection}{\numberline {5.2.1.5}mem\_to\_msg()}{18}{subsubsection.5.2.1.5}%
-\contentsline {subsubsection}{\numberline {5.2.1.6}read\_bgp\_prefix()}{19}{subsubsection.5.2.1.6}%
+\contentsline {subsubsection}{\numberline {5.2.1.6}read\_bgp\_prefix()}{18}{subsubsection.5.2.1.6}%
 \contentsline {subsubsection}{\numberline {5.2.1.7}reverse\_array\_10()}{19}{subsubsection.5.2.1.7}%
 \contentsline {section}{\numberline {5.3}linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{19}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}Function Documentation}{20}{subsection.5.3.1}%
 \contentsline {subsubsection}{\numberline {5.3.1.1}init\_tree4()}{20}{subsubsection.5.3.1.1}%
 \contentsline {subsubsection}{\numberline {5.3.1.2}insert\_tree4()}{20}{subsubsection.5.3.1.2}%
-\contentsline {subsubsection}{\numberline {5.3.1.3}lookup\_exact()}{21}{subsubsection.5.3.1.3}%
+\contentsline {subsubsection}{\numberline {5.3.1.3}lookup\_exact()}{20}{subsubsection.5.3.1.3}%
 \contentsline {subsubsection}{\numberline {5.3.1.4}lookup\_lpm()}{21}{subsubsection.5.3.1.4}%
-\contentsline {subsubsection}{\numberline {5.3.1.5}remove\_node()}{22}{subsubsection.5.3.1.5}%
+\contentsline {subsubsection}{\numberline {5.3.1.5}remove\_node()}{21}{subsubsection.5.3.1.5}%
 \contentsline {section}{\numberline {5.4}linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{22}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{23}{subsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.1}init\_tree4()}{23}{subsubsection.5.4.1.1}%
+\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{22}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}init\_tree4()}{22}{subsubsection.5.4.1.1}%
 \contentsline {subsubsection}{\numberline {5.4.1.2}insert\_trie4()}{23}{subsubsection.5.4.1.2}%
 \contentsline {subsubsection}{\numberline {5.4.1.3}lookup\_exact()}{23}{subsubsection.5.4.1.3}%
 \contentsline {subsubsection}{\numberline {5.4.1.4}lookup\_lpm()}{24}{subsubsection.5.4.1.4}%
 \contentsline {subsubsection}{\numberline {5.4.1.5}remove\_node()}{24}{subsubsection.5.4.1.5}%
-\contentsline {section}{\numberline {5.5}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{25}{section.5.5}%
-\contentsline {chapter}{Index}{27}{section*.20}%
+\contentsline {section}{\numberline {5.5}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{24}{section.5.5}%
+\contentsline {chapter}{Index}{25}{section*.20}%
