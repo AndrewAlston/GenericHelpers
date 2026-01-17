@@ -77,17 +77,17 @@ struct proto_msg *mem_to_msg(const __u8 *ptr);
  * memory allocation.
  * @param[in] ptr A Pointer to the start of the compressed prefix
 */
+struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
 
 
-void *free_mem_to_msg(struct proto_msg *msg);
 
 /** @brief Frees the Pointer returned by a previous successful call to mem_to_msg
  *
  *  NOTE: This function should only be called on a pointer previously returned by mem_to_msg
  *
 */
+void *free_mem_to_msg(struct proto_msg *msg);
 
-struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
 
 /** @brief this function gets a variable encoded 64 bit integer
  * from a 7 byte encoded string of bytes.
@@ -96,15 +96,15 @@ struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
  * @param[in] varint A pointer to where the extracted varint will be stored
  * @returns The number of bytes used to encode the extracted varint
  */
+__u8 get_var_int(const u_char *data, __u64 *varint);
 
-void *free_bgp_prefix(struct bgp_ipv4_prefix *prefix);
 
 /** @brief Frees the Pointer returned by a previous successful call to read_bgp_prefix
  *
  *  NOTE: This function should only be called on a pointer previously returned by read_bgp_prefix
  *
 */
+void *free_bgp_prefix(struct bgp_ipv4_prefix *prefix);
 
-__u8 get_var_int(const u_char *data, __u64 *varint);
 
 #endif //GENERICHELPER_DECODE_HELPERS_H

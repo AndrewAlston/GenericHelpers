@@ -19,8 +19,8 @@
 \indexentry{free\_bgp\_prefix@{free\_bgp\_prefix}!decode\_helpers.c@{decode\_helpers.c}|hyperpage}{10}
 \indexentry{decode\_helpers.c@{decode\_helpers.c}!free\_mem\_to\_msg@{free\_mem\_to\_msg}|hyperpage}{10}
 \indexentry{free\_mem\_to\_msg@{free\_mem\_to\_msg}!decode\_helpers.c@{decode\_helpers.c}|hyperpage}{10}
-\indexentry{decode\_helpers.c@{decode\_helpers.c}!get\_var\_int@{get\_var\_int}|hyperpage}{11}
-\indexentry{get\_var\_int@{get\_var\_int}!decode\_helpers.c@{decode\_helpers.c}|hyperpage}{11}
+\indexentry{decode\_helpers.c@{decode\_helpers.c}!get\_var\_int@{get\_var\_int}|hyperpage}{10}
+\indexentry{get\_var\_int@{get\_var\_int}!decode\_helpers.c@{decode\_helpers.c}|hyperpage}{10}
 \indexentry{decode\_helpers.c@{decode\_helpers.c}!mem\_to\_msg@{mem\_to\_msg}|hyperpage}{11}
 \indexentry{mem\_to\_msg@{mem\_to\_msg}!decode\_helpers.c@{decode\_helpers.c}|hyperpage}{11}
 \indexentry{decode\_helpers.c@{decode\_helpers.c}!read\_bgp\_prefix@{read\_bgp\_prefix}|hyperpage}{12}

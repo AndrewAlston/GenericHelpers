@@ -16,7 +16,7 @@
     \subitem {dump\_buffer}, \hyperpage{10}
     \subitem {free\_bgp\_prefix}, \hyperpage{10}
     \subitem {free\_mem\_to\_msg}, \hyperpage{10}
-    \subitem {get\_var\_int}, \hyperpage{11}
+    \subitem {get\_var\_int}, \hyperpage{10}
     \subitem {mem\_to\_msg}, \hyperpage{11}
     \subitem {read\_bgp\_prefix}, \hyperpage{12}
     \subitem {reverse\_array\_10}, \hyperpage{12}
@@ -44,7 +44,7 @@
   \indexspace
 
   \item {get\_var\_int}
-    \subitem {decode\_helpers.c}, \hyperpage{11}
+    \subitem {decode\_helpers.c}, \hyperpage{10}
     \subitem {decode\_helpers.h}, \hyperpage{15}
 
   \indexspace

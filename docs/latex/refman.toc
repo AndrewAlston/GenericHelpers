@@ -21,7 +21,7 @@
 \contentsline {subsubsection}{\numberline {5.1.1.1}dump\_buffer()}{10}{subsubsection.5.1.1.1}%
 \contentsline {subsubsection}{\numberline {5.1.1.2}free\_bgp\_prefix()}{10}{subsubsection.5.1.1.2}%
 \contentsline {subsubsection}{\numberline {5.1.1.3}free\_mem\_to\_msg()}{10}{subsubsection.5.1.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.1.4}get\_var\_int()}{11}{subsubsection.5.1.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}get\_var\_int()}{10}{subsubsection.5.1.1.4}%
 \contentsline {subsubsection}{\numberline {5.1.1.5}mem\_to\_msg()}{11}{subsubsection.5.1.1.5}%
 \contentsline {subsubsection}{\numberline {5.1.1.6}read\_bgp\_prefix()}{12}{subsubsection.5.1.1.6}%
 \contentsline {subsubsection}{\numberline {5.1.1.7}reverse\_array\_10()}{12}{subsubsection.5.1.1.7}%
@@ -31,7 +31,7 @@
 \contentsline {subsubsection}{\numberline {5.2.1.2}free\_bgp\_prefix()}{14}{subsubsection.5.2.1.2}%
 \contentsline {subsubsection}{\numberline {5.2.1.3}free\_mem\_to\_msg()}{15}{subsubsection.5.2.1.3}%
 \contentsline {subsubsection}{\numberline {5.2.1.4}get\_var\_int()}{15}{subsubsection.5.2.1.4}%
-\contentsline {subsubsection}{\numberline {5.2.1.5}mem\_to\_msg()}{16}{subsubsection.5.2.1.5}%
+\contentsline {subsubsection}{\numberline {5.2.1.5}mem\_to\_msg()}{15}{subsubsection.5.2.1.5}%
 \contentsline {subsubsection}{\numberline {5.2.1.6}read\_bgp\_prefix()}{16}{subsubsection.5.2.1.6}%
 \contentsline {subsubsection}{\numberline {5.2.1.7}reverse\_array\_10()}{16}{subsubsection.5.2.1.7}%
 \contentsline {section}{\numberline {5.3}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{17}{section.5.3}%
