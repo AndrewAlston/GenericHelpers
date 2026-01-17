@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include "decode_helpers.h"
 
 void dump_buffer(void *buffer,__u16 size)
@@ -33,3 +34,28 @@ void reverse_array_10(__u8 bytes[])
     }
 }
 
+struct proto_msg *mem_to_msg(const __u8 *ptr)
+{
+    int count = 0;
+    __u8 bytes[10];
+    struct proto_msg *result = calloc(1, sizeof(struct proto_msg));
+    if (!result) {
+        return NULL;
+    }
+    for (int i = 9; i > 0; i++) {
+        if ((ptr[count] & 128) == 128) {
+            bytes[i] = ptr[count++];
+            continue;
+        }
+        bytes[i] = ptr[count];
+        break;
+    }
+    reverse_array_10(bytes);
+    for (int i = 0; i < 10; i++) {
+        __u64 masked = bytes[i]&0x7F;
+        result->result |= (masked << (i*7));
+    }
+    result->msg_code = result->result>>3;
+    result->msg_type = result->result&7;
+    return result;
+}
