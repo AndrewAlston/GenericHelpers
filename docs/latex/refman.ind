@@ -14,31 +14,44 @@
 
   \item {decode\_helpers.c}, \hyperpage{9}
     \subitem {dump\_buffer}, \hyperpage{10}
-    \subitem {get\_var\_int}, \hyperpage{10}
+    \subitem {free\_bgp\_prefix}, \hyperpage{10}
+    \subitem {free\_mem\_to\_msg}, \hyperpage{10}
+    \subitem {get\_var\_int}, \hyperpage{11}
     \subitem {mem\_to\_msg}, \hyperpage{11}
-    \subitem {read\_bgp\_prefix}, \hyperpage{11}
+    \subitem {read\_bgp\_prefix}, \hyperpage{12}
     \subitem {reverse\_array\_10}, \hyperpage{12}
-  \item {decode\_helpers.h}, \hyperpage{12}
-    \subitem {dump\_buffer}, \hyperpage{13}
-    \subitem {get\_var\_int}, \hyperpage{14}
-    \subitem {mem\_to\_msg}, \hyperpage{14}
-    \subitem {read\_bgp\_prefix}, \hyperpage{15}
-    \subitem {reverse\_array\_10}, \hyperpage{15}
+  \item {decode\_helpers.h}, \hyperpage{13}
+    \subitem {dump\_buffer}, \hyperpage{14}
+    \subitem {free\_bgp\_prefix}, \hyperpage{14}
+    \subitem {free\_mem\_to\_msg}, \hyperpage{14}
+    \subitem {get\_var\_int}, \hyperpage{15}
+    \subitem {mem\_to\_msg}, \hyperpage{15}
+    \subitem {read\_bgp\_prefix}, \hyperpage{16}
+    \subitem {reverse\_array\_10}, \hyperpage{16}
   \item {dump\_buffer}
     \subitem {decode\_helpers.c}, \hyperpage{10}
-    \subitem {decode\_helpers.h}, \hyperpage{13}
+    \subitem {decode\_helpers.h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {free\_bgp\_prefix}
+    \subitem {decode\_helpers.c}, \hyperpage{10}
+    \subitem {decode\_helpers.h}, \hyperpage{14}
+  \item {free\_mem\_to\_msg}
+    \subitem {decode\_helpers.c}, \hyperpage{10}
+    \subitem {decode\_helpers.h}, \hyperpage{14}
 
   \indexspace
 
   \item {get\_var\_int}
-    \subitem {decode\_helpers.c}, \hyperpage{10}
-    \subitem {decode\_helpers.h}, \hyperpage{14}
+    \subitem {decode\_helpers.c}, \hyperpage{11}
+    \subitem {decode\_helpers.h}, \hyperpage{15}
 
   \indexspace
 
   \item {mem\_to\_msg}
     \subitem {decode\_helpers.c}, \hyperpage{11}
-    \subitem {decode\_helpers.h}, \hyperpage{14}
+    \subitem {decode\_helpers.h}, \hyperpage{15}
   \item {msg\_code}
     \subitem {proto\_msg}, \hyperpage{8}
   \item {msg\_type}
@@ -61,13 +74,13 @@
   \indexspace
 
   \item {read\_bgp\_prefix}
-    \subitem {decode\_helpers.c}, \hyperpage{11}
-    \subitem {decode\_helpers.h}, \hyperpage{15}
-  \item {README.md}, \hyperpage{16}
+    \subitem {decode\_helpers.c}, \hyperpage{12}
+    \subitem {decode\_helpers.h}, \hyperpage{16}
+  \item {README.md}, \hyperpage{17}
   \item {result}
     \subitem {proto\_msg}, \hyperpage{8}
   \item {reverse\_array\_10}
     \subitem {decode\_helpers.c}, \hyperpage{12}
-    \subitem {decode\_helpers.h}, \hyperpage{15}
+    \subitem {decode\_helpers.h}, \hyperpage{16}
 
 \end{theindex}

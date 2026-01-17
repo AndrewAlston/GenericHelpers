@@ -1,4 +1,4 @@
 <map id="get_var_int" name="get_var_int">
-<area shape="rect" id="node1" title="this function gets a variable encoded 64 bit integer from a 7 byte encoded string of bytes." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node1" title="Frees the Pointer returned by a previous successful call to read_bgp_prefix." alt="" coords="5,5,116,32"/>
 <area shape="rect" id="node2" href="$decode__helpers_8c.html#a298daf8160cdf855a5ae27d4fb55b405" title="This function reverses a 10 byte array." alt="" coords="164,5,315,32"/>
 </map>

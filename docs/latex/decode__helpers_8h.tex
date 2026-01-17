@@ -31,10 +31,14 @@ void \mbox{\hyperlink{decode__helpers_8h_a298daf8160cdf855a5ae27d4fb55b405}{reve
 \begin{DoxyCompactList}\small\item\em This function reverses a 10 byte array. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$ \mbox{\hyperlink{decode__helpers_8h_a224ae6354763d1d7e15122ecbe5985e0}{mem\+\_\+to\+\_\+msg}} (const \+\_\+\+\_\+u8 $\ast$ptr)
 \begin{DoxyCompactList}\small\item\em This function is used to decode protobuf messages and message types. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$ \mbox{\hyperlink{decode__helpers_8h_a3edfbd2b78d141f355c240b7b1f52e18}{read\+\_\+bgp\+\_\+prefix}} (\+\_\+\+\_\+u8 $\ast$ptr)
+void $\ast$ \mbox{\hyperlink{decode__helpers_8h_abff66d59a5640fe183eb927c4e94ff8b}{free\+\_\+mem\+\_\+to\+\_\+msg}} (struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$msg)
 \begin{DoxyCompactList}\small\item\em Reads a BGP encoded prefix from an NLRI or withdraw message. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$ \mbox{\hyperlink{decode__helpers_8h_a3edfbd2b78d141f355c240b7b1f52e18}{read\+\_\+bgp\+\_\+prefix}} (\+\_\+\+\_\+u8 $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Frees the Pointer returned by a previous successful call to mem\+\_\+to\+\_\+msg. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{decode__helpers_8h_ae3a3cbd7217788912d4b6188c7ef9c40}{free\+\_\+bgp\+\_\+prefix}} (struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$prefix)
+\begin{DoxyCompactList}\small\item\em this function gets a variable encoded 64 bit integer from a 7 byte encoded string of bytes. \end{DoxyCompactList}\item 
 \+\_\+\+\_\+u8 \mbox{\hyperlink{decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975}{get\+\_\+var\+\_\+int}} (const u\+\_\+char $\ast$data, \+\_\+\+\_\+u64 $\ast$varint)
-\begin{DoxyCompactList}\small\item\em this function gets a variable encoded 64 bit integer from a 7 byte encoded string of bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Frees the Pointer returned by a previous successful call to read\+\_\+bgp\+\_\+prefix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -55,11 +59,11 @@ This function dumps memory in a format that is importable by wireshark or other 
 \mbox{\texttt{ in}}  & {\em size} & The number of bytes to dump \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975}\label{decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975}} 
-\index{decode\_helpers.h@{decode\_helpers.h}!get\_var\_int@{get\_var\_int}}
-\index{get\_var\_int@{get\_var\_int}!decode\_helpers.h@{decode\_helpers.h}}
-\doxysubsubsection{\texorpdfstring{get\_var\_int()}{get\_var\_int()}}
-{\footnotesize\ttfamily \+\_\+\+\_\+u8 get\+\_\+var\+\_\+int (\begin{DoxyParamCaption}\item[{const u\+\_\+char $\ast$}]{data,  }\item[{\+\_\+\+\_\+u64 $\ast$}]{varint }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{decode__helpers_8h_ae3a3cbd7217788912d4b6188c7ef9c40}\label{decode__helpers_8h_ae3a3cbd7217788912d4b6188c7ef9c40}} 
+\index{decode\_helpers.h@{decode\_helpers.h}!free\_bgp\_prefix@{free\_bgp\_prefix}}
+\index{free\_bgp\_prefix@{free\_bgp\_prefix}!decode\_helpers.h@{decode\_helpers.h}}
+\doxysubsubsection{\texorpdfstring{free\_bgp\_prefix()}{free\_bgp\_prefix()}}
+{\footnotesize\ttfamily void$\ast$ free\+\_\+bgp\+\_\+prefix (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$}]{prefix }\end{DoxyParamCaption})}
 
 
 
@@ -75,7 +79,36 @@ this function gets a variable encoded 64 bit integer from a 7 byte encoded strin
 \begin{DoxyReturn}{Returns}
 The number of bytes used to encode the extracted varint 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+\mbox{\Hypertarget{decode__helpers_8h_abff66d59a5640fe183eb927c4e94ff8b}\label{decode__helpers_8h_abff66d59a5640fe183eb927c4e94ff8b}} 
+\index{decode\_helpers.h@{decode\_helpers.h}!free\_mem\_to\_msg@{free\_mem\_to\_msg}}
+\index{free\_mem\_to\_msg@{free\_mem\_to\_msg}!decode\_helpers.h@{decode\_helpers.h}}
+\doxysubsubsection{\texorpdfstring{free\_mem\_to\_msg()}{free\_mem\_to\_msg()}}
+{\footnotesize\ttfamily void$\ast$ free\+\_\+mem\+\_\+to\+\_\+msg (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Reads a BGP encoded prefix from an NLRI or withdraw message. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} @detail This function decodes compressed ipv4 prefix\textquotesingle{}s as contained in bgp update messages. The first byte in the message represents the CIDR mask (The number of bits in the prefix). If the CIDR is fully divisible by 8, then CIDR/8 bytes are copied into the prefix element. If CIDR is NOT fully divisible by 8 then (CIDR/8)+1 bytes are copied into the prefix element. The next pointer element is set using the input pointer + 1 byte for the CIDR and then X bytes for the prefix itself, where X is either CIDR/8 or (CIDR/8)+1 NOTE\+: This function returns a pointer that must be free\textquotesingle{}d by the caller to avoid memory leaks. This function only serves for demonstration purposes because this type of processing would normally be done inline in a BGP update function without the need of additional memory allocation. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & A Pointer to the start of the compressed prefix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975}\label{decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975}} 
+\index{decode\_helpers.h@{decode\_helpers.h}!get\_var\_int@{get\_var\_int}}
+\index{get\_var\_int@{get\_var\_int}!decode\_helpers.h@{decode\_helpers.h}}
+\doxysubsubsection{\texorpdfstring{get\_var\_int()}{get\_var\_int()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+u8 get\+\_\+var\+\_\+int (\begin{DoxyParamCaption}\item[{const u\+\_\+char $\ast$}]{data,  }\item[{\+\_\+\+\_\+u64 $\ast$}]{varint }\end{DoxyParamCaption})}
+
+
+
+Frees the Pointer returned by a previous successful call to read\+\_\+bgp\+\_\+prefix. 
+
+NOTE\+: This function should only be called on a pointer previously returned by read\+\_\+bgp\+\_\+prefix Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -115,17 +148,9 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Reads a BGP encoded prefix from an NLRI or withdraw message. 
+Frees the Pointer returned by a previous successful call to mem\+\_\+to\+\_\+msg. 
 
-\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} @detail This function decodes compressed ipv4 prefix\textquotesingle{}s as contained in bgp update messages. The first byte in the message represents the CIDR mask (The number of bits in the prefix). If the CIDR is fully divisible by 8, then CIDR/8 bytes are copied into the prefix element. If CIDR is NOT fully divisible by 8 then (CIDR/8)+1 bytes are copied into the prefix element. The next pointer element is set using the input pointer + 1 byte for the CIDR and then X bytes for the prefix itself, where X is either CIDR/8 or (CIDR/8)+1 NOTE\+: This function returns a pointer that must be free\textquotesingle{}d by the caller to avoid memory leaks. This function only serves for demonstration purposes because this type of processing would normally be done inline in a BGP update function without the need of additional memory allocation. 
-\end{DoxySeeAlso}
-
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em ptr} & A Pointer to the start of the compressed prefix \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{decode__helpers_8h_a298daf8160cdf855a5ae27d4fb55b405}\label{decode__helpers_8h_a298daf8160cdf855a5ae27d4fb55b405}} 
+NOTE\+: This function should only be called on a pointer previously returned by mem\+\_\+to\+\_\+msg \mbox{\Hypertarget{decode__helpers_8h_a298daf8160cdf855a5ae27d4fb55b405}\label{decode__helpers_8h_a298daf8160cdf855a5ae27d4fb55b405}} 
 \index{decode\_helpers.h@{decode\_helpers.h}!reverse\_array\_10@{reverse\_array\_10}}
 \index{reverse\_array\_10@{reverse\_array\_10}!decode\_helpers.h@{decode\_helpers.h}}
 \doxysubsubsection{\texorpdfstring{reverse\_array\_10()}{reverse\_array\_10()}}

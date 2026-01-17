@@ -36,6 +36,8 @@
     <LI><OBJECT type="text/sitemap"><param name="Name" value="decode_helpers.c"><param name="Local" value="decode__helpers_8c.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="dump_buffer"><param name="Local" value="decode__helpers_8c.html#a9df7d5bf99061b8754aad86196f71cde"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="free_bgp_prefix"><param name="Local" value="decode__helpers_8c.html#ae3a3cbd7217788912d4b6188c7ef9c40"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="free_mem_to_msg"><param name="Local" value="decode__helpers_8c.html#abff66d59a5640fe183eb927c4e94ff8b"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="get_var_int"><param name="Local" value="decode__helpers_8c.html#aaf62cf9fd7a378b8e7e6c5e11ef67975"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="mem_to_msg"><param name="Local" value="decode__helpers_8c.html#a224ae6354763d1d7e15122ecbe5985e0"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="read_bgp_prefix"><param name="Local" value="decode__helpers_8c.html#a3edfbd2b78d141f355c240b7b1f52e18"><param name="ImageNumber" value="11"></OBJECT>
@@ -56,6 +58,8 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="result"><param name="Local" value="structproto__msg.html#a161a6d861e51532164a825c5f64f6ba6"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="dump_buffer"><param name="Local" value="decode__helpers_8h.html#a9df7d5bf99061b8754aad86196f71cde"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="free_bgp_prefix"><param name="Local" value="decode__helpers_8h.html#ae3a3cbd7217788912d4b6188c7ef9c40"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="free_mem_to_msg"><param name="Local" value="decode__helpers_8h.html#abff66d59a5640fe183eb927c4e94ff8b"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="get_var_int"><param name="Local" value="decode__helpers_8h.html#aaf62cf9fd7a378b8e7e6c5e11ef67975"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="mem_to_msg"><param name="Local" value="decode__helpers_8h.html#a224ae6354763d1d7e15122ecbe5985e0"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="read_bgp_prefix"><param name="Local" value="decode__helpers_8h.html#a3edfbd2b78d141f355c240b7b1f52e18"><param name="ImageNumber" value="11"></OBJECT>
