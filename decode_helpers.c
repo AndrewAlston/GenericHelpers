@@ -77,3 +77,39 @@ struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr) {
     }
     return pfx;
 }
+
+__u8 get_var_int(const u_char *data, __u64 *varint)
+{
+    if (!data || !varint) {
+        return 0;
+    }
+    __u8 bytes[10];
+    __u8 data_count = 0;
+    __u64 byte_count = 0;
+    __u8 length = 9;
+
+    /**< Zero out the varint before we start */
+    *varint = 0;
+    /**< If the first byte does not have the high order bit set
+     * take that as a standalone byte, else transverse the memory
+     * pointed to by data until either we have 10 bytes or until
+     * the high order bit is not set */
+    if ((data[0] & 128) == 128) {
+        bytes[length] = data[data_count];
+        byte_count = 1;
+    } else {
+        while ((data[data_count] & 128) == 128) {
+            bytes[length--] = data[data_count++];
+            byte_count++;
+            if (byte_count == 9)
+                break;
+        }
+        bytes[length] = data[data_count];
+    }
+    reverse_array_10(bytes);
+    for (int i = 0; i < 10; i++) {
+        __u64 masked = bytes[i]&0x7F;
+        *varint |= (masked << (i&7));
+    }
+    return byte_count;
+}

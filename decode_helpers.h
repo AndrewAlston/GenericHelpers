@@ -79,4 +79,13 @@ struct proto_msg *mem_to_msg(const __u8 *ptr);
 */
 struct bgp_ipv4_prefix *read_bgp_prefix(__u8 *ptr);
 
+/** @brief this function gets a variable encoded 64 bit integer
+ * from a 7 byte encoded string of bytes.
+ * @param[in] data A pointer to the bytes we are extracting the
+ * variable integer from
+ * @param[in] varint A pointer to where the extracted varint will be stored
+ * @returns The number of bytes used to encode the extracted varint
+ */
+__u8 get_var_int(const u_char *data, __u64 *varint);
+
 #endif //GENERICHELPER_DECODE_HELPERS_H
