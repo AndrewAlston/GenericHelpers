@@ -1,0 +1,134 @@
+\hypertarget{decode__helpers_8c}{}\doxysection{decode\+\_\+helpers.\+c File Reference}
+\label{decode__helpers_8c}\index{decode\_helpers.c@{decode\_helpers.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}decode\+\_\+helpers.\+h\char`\"{}}\newline
+Include dependency graph for decode\+\_\+helpers.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{decode__helpers_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{decode__helpers_8c_a9df7d5bf99061b8754aad86196f71cde}{dump\+\_\+buffer}} (void $\ast$buffer, \+\_\+\+\_\+u16 size)
+\begin{DoxyCompactList}\small\item\em dump\+\_\+buffer takes a pointer and dumps a specific number of bytes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{decode__helpers_8c_a298daf8160cdf855a5ae27d4fb55b405}{reverse\+\_\+array\+\_\+10}} (\+\_\+\+\_\+u8 bytes\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function reverses a 10 byte array. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} $\ast$ \mbox{\hyperlink{decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0}{mem\+\_\+to\+\_\+msg}} (const \+\_\+\+\_\+u8 $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em This function is used to decode protobuf messages and message types. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} $\ast$ \mbox{\hyperlink{decode__helpers_8c_a3edfbd2b78d141f355c240b7b1f52e18}{read\+\_\+bgp\+\_\+prefix}} (\+\_\+\+\_\+u8 $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Reads a BGP encoded prefix from an NLRI or withdraw message. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+u8 \mbox{\hyperlink{decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11ef67975}{get\+\_\+var\+\_\+int}} (const u\+\_\+char $\ast$data, \+\_\+\+\_\+u64 $\ast$varint)
+\begin{DoxyCompactList}\small\item\em this function gets a variable encoded 64 bit integer from a 7 byte encoded string of bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{decode__helpers_8c_a9df7d5bf99061b8754aad86196f71cde}\label{decode__helpers_8c_a9df7d5bf99061b8754aad86196f71cde}} 
+\index{decode\_helpers.c@{decode\_helpers.c}!dump\_buffer@{dump\_buffer}}
+\index{dump\_buffer@{dump\_buffer}!decode\_helpers.c@{decode\_helpers.c}}
+\doxysubsubsection{\texorpdfstring{dump\_buffer()}{dump\_buffer()}}
+{\footnotesize\ttfamily void dump\+\_\+buffer (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{\+\_\+\+\_\+u16}]{size }\end{DoxyParamCaption})}
+
+
+
+dump\+\_\+buffer takes a pointer and dumps a specific number of bytes 
+
+This function dumps memory in a format that is importable by wireshark or other programs that can import hex dumps 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em buffer} & A pointer to the memory to be dumped \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & The number of bytes to dump \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11ef67975}\label{decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11ef67975}} 
+\index{decode\_helpers.c@{decode\_helpers.c}!get\_var\_int@{get\_var\_int}}
+\index{get\_var\_int@{get\_var\_int}!decode\_helpers.c@{decode\_helpers.c}}
+\doxysubsubsection{\texorpdfstring{get\_var\_int()}{get\_var\_int()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+u8 get\+\_\+var\+\_\+int (\begin{DoxyParamCaption}\item[{const u\+\_\+char $\ast$}]{data,  }\item[{\+\_\+\+\_\+u64 $\ast$}]{varint }\end{DoxyParamCaption})}
+
+
+
+this function gets a variable encoded 64 bit integer from a 7 byte encoded string of bytes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & A pointer to the bytes we are extracting the variable integer from \\
+\hline
+\mbox{\texttt{ in}}  & {\em varint} & A pointer to where the extracted varint will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of bytes used to encode the extracted varint 
+\end{DoxyReturn}
+$<$ Zero out the varint before we start
+
+$<$ If the first byte does not have the high order bit set take that as a standalone byte, else transverse the memory pointed to by data until either we have 10 bytes or until the high order bit is not setHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0}\label{decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0}} 
+\index{decode\_helpers.c@{decode\_helpers.c}!mem\_to\_msg@{mem\_to\_msg}}
+\index{mem\_to\_msg@{mem\_to\_msg}!decode\_helpers.c@{decode\_helpers.c}}
+\doxysubsubsection{\texorpdfstring{mem\_to\_msg()}{mem\_to\_msg()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}}$\ast$ mem\+\_\+to\+\_\+msg (\begin{DoxyParamCaption}\item[{const \+\_\+\+\_\+u8 $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+This function is used to decode protobuf messages and message types. 
+
+This function reads a maximum of 10 bytes of memory into an array, terminating when one byte does not have its high order bit set. It then reverses the array, and concatenates the byte array into a single 64 bit integer, using only the low order 7 bits of each byte in the array. The result is then shifted right by 3 to produce the message code and AND\textquotesingle{}d by 7 to get the high order bytes to find the message type NOTE\+: It is important that this function returns allocated memory, and the result must be free\textquotesingle{}d by the calling function to avoid memory leaks. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & A pointer to the memory containing the bytes requiring decode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An allocated \mbox{\hyperlink{structproto__msg}{proto\+\_\+msg}} structure or NULL if allocation of memory fails 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{decode__helpers_8c_a3edfbd2b78d141f355c240b7b1f52e18}\label{decode__helpers_8c_a3edfbd2b78d141f355c240b7b1f52e18}} 
+\index{decode\_helpers.c@{decode\_helpers.c}!read\_bgp\_prefix@{read\_bgp\_prefix}}
+\index{read\_bgp\_prefix@{read\_bgp\_prefix}!decode\_helpers.c@{decode\_helpers.c}}
+\doxysubsubsection{\texorpdfstring{read\_bgp\_prefix()}{read\_bgp\_prefix()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}}$\ast$ read\+\_\+bgp\+\_\+prefix (\begin{DoxyParamCaption}\item[{\+\_\+\+\_\+u8 $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Reads a BGP encoded prefix from an NLRI or withdraw message. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structbgp__ipv4__prefix}{bgp\+\_\+ipv4\+\_\+prefix}} @detail This function decodes compressed ipv4 prefix\textquotesingle{}s as contained in bgp update messages. The first byte in the message represents the CIDR mask (The number of bits in the prefix). If the CIDR is fully divisible by 8, then CIDR/8 bytes are copied into the prefix element. If CIDR is NOT fully divisible by 8 then (CIDR/8)+1 bytes are copied into the prefix element. The next pointer element is set using the input pointer + 1 byte for the CIDR and then X bytes for the prefix itself, where X is either CIDR/8 or (CIDR/8)+1 NOTE\+: This function returns a pointer that must be free\textquotesingle{}d by the caller to avoid memory leaks. This function only serves for demonstration purposes because this type of processing would normally be done inline in a BGP update function without the need of additional memory allocation. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ptr} & A Pointer to the start of the compressed prefix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{decode__helpers_8c_a298daf8160cdf855a5ae27d4fb55b405}\label{decode__helpers_8c_a298daf8160cdf855a5ae27d4fb55b405}} 
+\index{decode\_helpers.c@{decode\_helpers.c}!reverse\_array\_10@{reverse\_array\_10}}
+\index{reverse\_array\_10@{reverse\_array\_10}!decode\_helpers.c@{decode\_helpers.c}}
+\doxysubsubsection{\texorpdfstring{reverse\_array\_10()}{reverse\_array\_10()}}
+{\footnotesize\ttfamily void reverse\+\_\+array\+\_\+10 (\begin{DoxyParamCaption}\item[{\+\_\+\+\_\+u8}]{bytes\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function reverses a 10 byte array. 
+
+This function is used primarily for handling variable integer decodes VARINT\textquotesingle{}s are something used heavily in gbp file formats (Google protobuffers) NOTE\+: This function assumes that the input array is at least 10 bytes long and should the input array be less than 10 bytes this may cause unexpected behavior 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em bytes} & An array of bytes to be reversed. \\
+\hline
+\end{DoxyParams}

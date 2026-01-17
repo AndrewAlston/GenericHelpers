@@ -1,0 +1,73 @@
+\begin{theindex}
+
+  \item {bgp\_ipv4\_prefix}, \hyperpage{7}
+    \subitem {cidr}, \hyperpage{7}
+    \subitem {next}, \hyperpage{7}
+    \subitem {prefix}, \hyperpage{7}
+
+  \indexspace
+
+  \item {cidr}
+    \subitem {bgp\_ipv4\_prefix}, \hyperpage{7}
+
+  \indexspace
+
+  \item {decode\_helpers.c}, \hyperpage{9}
+    \subitem {dump\_buffer}, \hyperpage{10}
+    \subitem {get\_var\_int}, \hyperpage{10}
+    \subitem {mem\_to\_msg}, \hyperpage{11}
+    \subitem {read\_bgp\_prefix}, \hyperpage{11}
+    \subitem {reverse\_array\_10}, \hyperpage{12}
+  \item {decode\_helpers.h}, \hyperpage{12}
+    \subitem {dump\_buffer}, \hyperpage{14}
+    \subitem {get\_var\_int}, \hyperpage{14}
+    \subitem {mem\_to\_msg}, \hyperpage{15}
+    \subitem {read\_bgp\_prefix}, \hyperpage{15}
+    \subitem {reverse\_array\_10}, \hyperpage{16}
+  \item {dump\_buffer}
+    \subitem {decode\_helpers.c}, \hyperpage{10}
+    \subitem {decode\_helpers.h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {get\_var\_int}
+    \subitem {decode\_helpers.c}, \hyperpage{10}
+    \subitem {decode\_helpers.h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {mem\_to\_msg}
+    \subitem {decode\_helpers.c}, \hyperpage{11}
+    \subitem {decode\_helpers.h}, \hyperpage{15}
+  \item {msg\_code}
+    \subitem {proto\_msg}, \hyperpage{8}
+  \item {msg\_type}
+    \subitem {proto\_msg}, \hyperpage{8}
+
+  \indexspace
+
+  \item {next}
+    \subitem {bgp\_ipv4\_prefix}, \hyperpage{7}
+
+  \indexspace
+
+  \item {prefix}
+    \subitem {bgp\_ipv4\_prefix}, \hyperpage{7}
+  \item {proto\_msg}, \hyperpage{8}
+    \subitem {msg\_code}, \hyperpage{8}
+    \subitem {msg\_type}, \hyperpage{8}
+    \subitem {result}, \hyperpage{8}
+
+  \indexspace
+
+  \item {read\_bgp\_prefix}
+    \subitem {decode\_helpers.c}, \hyperpage{11}
+    \subitem {decode\_helpers.h}, \hyperpage{15}
+  \item {README.md}, \hyperpage{16}
+  \item {result}
+    \subitem {proto\_msg}, \hyperpage{8}
+  \item {reverse\_array\_10}
+    \subitem {decode\_helpers.c}, \hyperpage{12}
+    \subitem {decode\_helpers.h}, \hyperpage{16}
+
+\end{theindex}

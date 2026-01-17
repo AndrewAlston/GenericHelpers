@@ -21,7 +21,6 @@ CMakeFiles/
 .idea/
 CMakeDoxy*
 Doxy*
-docs/*
 libgenerichelper.*
 build.ninja
 .ninja*
