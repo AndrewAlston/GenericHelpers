@@ -250,7 +250,7 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An allocated <a class="el" href="structproto__msg.html">proto_msg</a> structure or NULL if allocation of memory fails </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An allocated <a class="el" href="structproto__msg.html" title="This structure contains elements used after decoding a protobuf string.">proto_msg</a> structure or NULL if allocation of memory fails </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -280,7 +280,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Reads a BGP encoded prefix from an NLRI or withdraw message. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="structbgp__ipv4__prefix.html">bgp_ipv4_prefix</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structbgp__ipv4__prefix.html" title="This structure contains a prefix (in network byte order) and a CIDR for the prefix.">bgp_ipv4_prefix</a></dd></dl>
 <p>This function decodes compressed ipv4 prefix's as contained in bgp update messages. The first byte in the message represents the CIDR mask (The number of bits in the prefix). If the CIDR is fully divisible by 8, then CIDR/8 bytes are copied into the prefix element. If CIDR is NOT fully divisible by 8 then (CIDR/8)+1 bytes are copied into the prefix element. The next pointer element is set using the input pointer + 1 byte for the CIDR and then X bytes for the prefix itself, where X is either CIDR/8 or (CIDR/8)+1 NOTE: This function returns a pointer that must be free'd by the caller to avoid memory leaks. This function only serves for demonstration purposes because this type of processing would normally be done inline in a BGP update function without the need of additional memory allocation. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>A Pointer to the start of the compressed prefix </td></tr>

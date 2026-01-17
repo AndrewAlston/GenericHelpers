@@ -7,8 +7,7 @@
 
 #include <asm-generic/types.h>
 
-/** @def bgp_ipv4_prefix
- * @brief This structure contains a prefix (in network byte order)
+/** @brief This structure contains a prefix (in network byte order)
  * and a CIDR for the prefix
  */
 struct bgp_ipv4_prefix {
@@ -17,8 +16,7 @@ struct bgp_ipv4_prefix {
     __u8 *next; /**< Pointer to the next entry NLRI entry */
 };
 
-/** @def proto_msg
- * @brief This structure contains elements used after decoding a protobuf string
+/** @brief This structure contains elements used after decoding a protobuf string
  */
 struct proto_msg {
     __u64 result; /**<  The 64 bit variable integer decode */

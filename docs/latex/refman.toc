@@ -6,54 +6,58 @@
 \contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
 \contentsline {chapter}{\numberline {4}Data Structure Documentation}{7}{chapter.4}%
 \contentsline {section}{\numberline {4.1}bgp\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ipv4\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}prefix Struct Reference}{7}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Field Documentation}{7}{subsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.1}cidr}{7}{subsubsection.4.1.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.2}next}{7}{subsubsection.4.1.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.1.3}prefix}{7}{subsubsection.4.1.1.3}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Field Documentation}{7}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}cidr}{7}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}next}{7}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}prefix}{8}{subsubsection.4.1.2.3}%
 \contentsline {section}{\numberline {4.2}proto\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}msg Struct Reference}{8}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Field Documentation}{8}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}msg\_code}{8}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}msg\_type}{8}{subsubsection.4.2.1.2}%
-\contentsline {subsubsection}{\numberline {4.2.1.3}result}{8}{subsubsection.4.2.1.3}%
-\contentsline {section}{\numberline {4.3}route4tree Struct Reference}{8}{section.4.3}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{8}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Field Documentation}{8}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}msg\_code}{8}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}msg\_type}{8}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}result}{9}{subsubsection.4.2.2.3}%
+\contentsline {section}{\numberline {4.3}route4tree Struct Reference}{9}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Detailed Description}{9}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Field Documentation}{9}{subsection.4.3.2}%
 \contentsline {subsubsection}{\numberline {4.3.2.1}data}{9}{subsubsection.4.3.2.1}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}parent}{9}{subsubsection.4.3.2.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.3}set}{9}{subsubsection.4.3.2.3}%
-\contentsline {subsubsection}{\numberline {4.3.2.4}unset}{9}{subsubsection.4.3.2.4}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}parent}{10}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}set}{10}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}unset}{10}{subsubsection.4.3.2.4}%
 \contentsline {chapter}{\numberline {5}File Documentation}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}decode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{11}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Function Documentation}{12}{subsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}dump\_buffer()}{12}{subsubsection.5.1.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.2}free\_bgp\_prefix()}{12}{subsubsection.5.1.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.1.3}free\_mem\_to\_msg()}{12}{subsubsection.5.1.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.1.4}get\_var\_int()}{13}{subsubsection.5.1.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.1.5}mem\_to\_msg()}{13}{subsubsection.5.1.1.5}%
-\contentsline {subsubsection}{\numberline {5.1.1.6}read\_bgp\_prefix()}{14}{subsubsection.5.1.1.6}%
-\contentsline {subsubsection}{\numberline {5.1.1.7}reverse\_array\_10()}{14}{subsubsection.5.1.1.7}%
-\contentsline {section}{\numberline {5.2}decode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{15}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Function Documentation}{16}{subsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.1}dump\_buffer()}{16}{subsubsection.5.2.1.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.2}free\_bgp\_prefix()}{16}{subsubsection.5.2.1.2}%
-\contentsline {subsubsection}{\numberline {5.2.1.3}free\_mem\_to\_msg()}{17}{subsubsection.5.2.1.3}%
-\contentsline {subsubsection}{\numberline {5.2.1.4}get\_var\_int()}{17}{subsubsection.5.2.1.4}%
-\contentsline {subsubsection}{\numberline {5.2.1.5}mem\_to\_msg()}{18}{subsubsection.5.2.1.5}%
-\contentsline {subsubsection}{\numberline {5.2.1.6}read\_bgp\_prefix()}{18}{subsubsection.5.2.1.6}%
-\contentsline {subsubsection}{\numberline {5.2.1.7}reverse\_array\_10()}{19}{subsubsection.5.2.1.7}%
-\contentsline {section}{\numberline {5.3}linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{19}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Function Documentation}{20}{subsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.1.1}init\_tree4()}{20}{subsubsection.5.3.1.1}%
-\contentsline {subsubsection}{\numberline {5.3.1.2}insert\_tree4()}{20}{subsubsection.5.3.1.2}%
-\contentsline {subsubsection}{\numberline {5.3.1.3}lookup\_exact()}{20}{subsubsection.5.3.1.3}%
-\contentsline {subsubsection}{\numberline {5.3.1.4}lookup\_lpm()}{21}{subsubsection.5.3.1.4}%
-\contentsline {subsubsection}{\numberline {5.3.1.5}remove\_node()}{21}{subsubsection.5.3.1.5}%
-\contentsline {section}{\numberline {5.4}linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{22}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{22}{subsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.1}init\_tree4()}{22}{subsubsection.5.4.1.1}%
-\contentsline {subsubsection}{\numberline {5.4.1.2}insert\_trie4()}{23}{subsubsection.5.4.1.2}%
-\contentsline {subsubsection}{\numberline {5.4.1.3}lookup\_exact()}{23}{subsubsection.5.4.1.3}%
-\contentsline {subsubsection}{\numberline {5.4.1.4}lookup\_lpm()}{24}{subsubsection.5.4.1.4}%
-\contentsline {subsubsection}{\numberline {5.4.1.5}remove\_node()}{24}{subsubsection.5.4.1.5}%
-\contentsline {section}{\numberline {5.5}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{24}{section.5.5}%
-\contentsline {chapter}{Index}{25}{section*.20}%
+\contentsline {section}{\numberline {5.1}accelerations.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}accelerations.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.3}decode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{12}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Function Documentation}{13}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}dump\_buffer()}{13}{subsubsection.5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}free\_bgp\_prefix()}{13}{subsubsection.5.3.1.2}%
+\contentsline {subsubsection}{\numberline {5.3.1.3}free\_mem\_to\_msg()}{14}{subsubsection.5.3.1.3}%
+\contentsline {subsubsection}{\numberline {5.3.1.4}get\_var\_int()}{14}{subsubsection.5.3.1.4}%
+\contentsline {subsubsection}{\numberline {5.3.1.5}mem\_to\_msg()}{15}{subsubsection.5.3.1.5}%
+\contentsline {subsubsection}{\numberline {5.3.1.6}read\_bgp\_prefix()}{15}{subsubsection.5.3.1.6}%
+\contentsline {subsubsection}{\numberline {5.3.1.7}reverse\_array\_10()}{16}{subsubsection.5.3.1.7}%
+\contentsline {section}{\numberline {5.4}decode\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}helpers.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{16}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Function Documentation}{17}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}dump\_buffer()}{17}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}free\_bgp\_prefix()}{18}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.3}free\_mem\_to\_msg()}{18}{subsubsection.5.4.1.3}%
+\contentsline {subsubsection}{\numberline {5.4.1.4}get\_var\_int()}{18}{subsubsection.5.4.1.4}%
+\contentsline {subsubsection}{\numberline {5.4.1.5}mem\_to\_msg()}{19}{subsubsection.5.4.1.5}%
+\contentsline {subsubsection}{\numberline {5.4.1.6}read\_bgp\_prefix()}{20}{subsubsection.5.4.1.6}%
+\contentsline {subsubsection}{\numberline {5.4.1.7}reverse\_array\_10()}{20}{subsubsection.5.4.1.7}%
+\contentsline {section}{\numberline {5.5}linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{21}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Function Documentation}{21}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}init\_tree4()}{21}{subsubsection.5.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.2}insert\_tree4()}{22}{subsubsection.5.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.5.1.3}lookup\_exact()}{22}{subsubsection.5.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.5.1.4}lookup\_lpm()}{22}{subsubsection.5.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.5.1.5}remove\_node()}{23}{subsubsection.5.5.1.5}%
+\contentsline {section}{\numberline {5.6}linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{23}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Function Documentation}{24}{subsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.1}init\_tree4()}{24}{subsubsection.5.6.1.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.2}insert\_trie4()}{24}{subsubsection.5.6.1.2}%
+\contentsline {subsubsection}{\numberline {5.6.1.3}lookup\_exact()}{25}{subsubsection.5.6.1.3}%
+\contentsline {subsubsection}{\numberline {5.6.1.4}lookup\_lpm()}{25}{subsubsection.5.6.1.4}%
+\contentsline {subsubsection}{\numberline {5.6.1.5}remove\_node()}{26}{subsubsection.5.6.1.5}%
+\contentsline {section}{\numberline {5.7}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{26}{section.5.7}%
+\contentsline {chapter}{Index}{27}{section*.23}%

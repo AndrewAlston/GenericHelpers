@@ -16,6 +16,8 @@ set(DOXYGEN_CALL_GRAPH YES)
 set(DOXYGEN_GENERATE_LATEX YES)
 set(DOXYGEN_USE_PDFLATEX YES)
 set(DOXYGEN_PDF_HYPERLINKS YES)
+set(DOXYGEN_ENABLE_PREPROCESSING YES)
+
 
 
 
@@ -26,4 +28,6 @@ add_library(generichelper SHARED
         decode_helpers.h
         decode_helpers.c
         linked_list.c
-        linked_list.h)
+        linked_list.h
+        accelerations.c
+        accelerations.h)

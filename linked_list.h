@@ -5,8 +5,7 @@
 #ifndef GENERICHELPER_LINKED_LIST_H
 #define GENERICHELPER_LINKED_LIST_H
 
-/** @bdef route4trie
- * @brief The route4trie structure is used in the creation of a 32 bit binary tree
+/** @brief The route4trie structure is used in the creation of a 32 bit binary tree
  */
 struct route4tree {
     struct route4tree *set; /**< Pointer used for when a binary bit is set */
