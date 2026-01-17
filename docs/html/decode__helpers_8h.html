@@ -165,9 +165,20 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The number of bytes used to encode the extracted varint </dd></dl>
-<p>&lt; Zero out the varint before we start</p>
-<p>&lt; If the first byte does not have the high order bit set take that as a standalone byte, else transverse the memory pointed to by data until either we have 10 bytes or until the high order bit is not set</p>
-<div class="dynheader">
+<p>Zero out the varint before we start </p><div class="fragment"><div class="line">*varint = 0</div>
+</div><!-- fragment --><p>If the first byte does not have the high order bit set take that as a standalone byte, else transverse the memory pointed to by data until either we have 10 bytes or until the high order bit is not set </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> ((data[0] &amp; 128) == 128) {</div>
+<div class="line">  bytes[length] = data[data_count];</div>
+<div class="line">  byte_count = 1;</div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">  <span class="keywordflow">while</span> ((data[data_count] &amp; 128) == 128) {</div>
+<div class="line">      bytes[length--] = data[data_count++];</div>
+<div class="line">      byte_count++;</div>
+<div class="line">      <span class="keywordflow">if</span> (byte_count == 9)</div>
+<div class="line">          <span class="keywordflow">break</span>;</div>
+<div class="line">  }</div>
+<div class="line">  bytes[length] = data[data_count];</div>
+<div class="line">}</div>
+</div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph.png" border="0" usemap="#adecode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph" alt=""/></div>
