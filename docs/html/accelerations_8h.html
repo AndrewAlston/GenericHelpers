@@ -38,31 +38,84 @@ $(function() {
 <div id="main-nav"></div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">accelerations.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;asm-generic/types.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for accelerations.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="accelerations_8h__incl.png" border="0" usemap="#aaccelerations_8h" alt=""/></div>
-<map name="aaccelerations_8h" id="aaccelerations_8h">
-<area shape="rect" title=" " alt="" coords="21,5,164,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,180,107"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="accelerations_8h__dep__incl.png" border="0" usemap="#aaccelerations_8hdep" alt=""/></div>
-<map name="aaccelerations_8hdep" id="aaccelerations_8hdep">
-<area shape="rect" title=" " alt="" coords="5,5,148,32"/>
-<area shape="rect" href="accelerations_8c.html" title=" " alt="" coords="5,80,148,107"/>
-</map>
-</div>
-</div>
+
 <p><a href="accelerations_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af5bcbf13502f009a690b48c4fc43266e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="accelerations_8h.html#af5bcbf13502f009a690b48c4fc43266e">search_array_32</a> (void *haystack, __u64 offset, size_t struct_size, size_t array_size, __u32 needle)</td></tr>
+<tr class="memdesc:af5bcbf13502f009a690b48c4fc43266e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search an array of structures for a particular 32 bit integer.  <a href="accelerations_8h.html#af5bcbf13502f009a690b48c4fc43266e">More...</a><br /></td></tr>
+<tr class="separator:af5bcbf13502f009a690b48c4fc43266e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af5bcbf13502f009a690b48c4fc43266e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5bcbf13502f009a690b48c4fc43266e">&#9670;&nbsp;</a></span>search_array_32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int search_array_32 </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>haystack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__u64&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>struct_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>array_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__u32&#160;</td>
+          <td class="paramname"><em>needle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Search an array of structures for a particular 32 bit integer. </p>
+<p>This function takes a pointer to an array of structures and an offset from the base struct to the 32 element in the structure, and then searches the array of structures for the first element of the array where *(struct_ptr+offset) = needle.</p>
+<p>NOTE: For this function to work properly the number of array elements has to be divisible by 8</p>
+<p>By way of example if we have the following</p>
+<p>struct x { __u32 a; __u32 b; __u32 c; } struct x array[24]; If we wanted to search for the first entry where x.b = 10, we would pass the function with the following arguments: array - which would be the pointer to the start of the array, 4 (element b is 4 bytes into the structure), sizeof(struct x) - the size of structure for loop increments, 24 - The number of elements in the array 10 - the needle we are searching for </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">haystack</td><td>- Pointer to the start of the array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>- An offset of the struct to the 32bit element we are searching </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">struct_size</td><td>- The size of each struct in the struct array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_size</td><td>- The number of elements in the array </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">needle</td><td>- The needle we are searching for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The array offset for the first matching instance or -1 if not found </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

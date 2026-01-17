@@ -5,6 +5,8 @@
 </OBJECT>
 <UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="md_README.html"><param name="Name" value="GenericHelpers"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="accelerations_8c.html#a68d1884ee1715aa5f013a296e81518db"><param name="Name" value="accelerations.c"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="accelerations_8h.html#af5bcbf13502f009a690b48c4fc43266e"><param name="Name" value="accelerations.h"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html"><param name="Name" value="bgp_ipv4_prefix"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html"><param name="Name" value="bgp_ipv4_prefix"></OBJECT>
   <UL>
@@ -241,6 +243,14 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structroute4tree.html"><param name="Name" value="route4tree"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structroute4tree.html#aaa1c8328ca443203b72496440a4b8d85"><param name="Name" value="unset"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="accelerations_8c.html#a68d1884ee1715aa5f013a296e81518db"><param name="Name" value="search_array_32"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="accelerations_8c.html#a68d1884ee1715aa5f013a296e81518db"><param name="Name" value="accelerations.c"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="accelerations_8h.html#af5bcbf13502f009a690b48c4fc43266e"><param name="Name" value="search_array_32"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="accelerations_8h.html#af5bcbf13502f009a690b48c4fc43266e"><param name="Name" value="accelerations.h"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structroute4tree.html#a859ffd9589daa7e35ca2bdd2d42dcdc0"><param name="Name" value="set"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structroute4tree.html#aaa1c8328ca443203b72496440a4b8d85"><param name="Name" value="unset"></OBJECT>

@@ -40,8 +40,14 @@
   <UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="File List"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="accelerations.c"><param name="Local" value="accelerations_8c.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="accelerations.h"><param name="Local" value="accelerations_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="accelerations.c"><param name="Local" value="accelerations_8c.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="search_array_32"><param name="Local" value="accelerations_8c.html#a68d1884ee1715aa5f013a296e81518db"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="accelerations.h"><param name="Local" value="accelerations_8h.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="search_array_32"><param name="Local" value="accelerations_8h.html#af5bcbf13502f009a690b48c4fc43266e"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="decode_helpers.c"><param name="Local" value="decode__helpers_8c.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="dump_buffer"><param name="Local" value="decode__helpers_8c.html#a9df7d5bf99061b8754aad86196f71cde"><param name="ImageNumber" value="11"></OBJECT>

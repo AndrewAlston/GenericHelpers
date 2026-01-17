@@ -1,19 +1,42 @@
 \hypertarget{accelerations_8h}{}\doxysection{accelerations.\+h File Reference}
 \label{accelerations_8h}\index{accelerations.h@{accelerations.h}}
-{\ttfamily \#include $<$asm-\/generic/types.\+h$>$}\newline
-Include dependency graph for accelerations.\+h\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=211pt]{accelerations_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=187pt]{accelerations_8h__dep__incl}
-\end{center}
-\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{accelerations_8h_af5bcbf13502f009a690b48c4fc43266e}{search\+\_\+array\+\_\+32}} (void $\ast$haystack, \+\_\+\+\_\+u64 offset, size\+\_\+t struct\+\_\+size, size\+\_\+t array\+\_\+size, \+\_\+\+\_\+u32 needle)
+\begin{DoxyCompactList}\small\item\em Search an array of structures for a particular 32 bit integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{accelerations_8h_af5bcbf13502f009a690b48c4fc43266e}\label{accelerations_8h_af5bcbf13502f009a690b48c4fc43266e}} 
+\index{accelerations.h@{accelerations.h}!search\_array\_32@{search\_array\_32}}
+\index{search\_array\_32@{search\_array\_32}!accelerations.h@{accelerations.h}}
+\doxysubsubsection{\texorpdfstring{search\_array\_32()}{search\_array\_32()}}
+{\footnotesize\ttfamily int search\+\_\+array\+\_\+32 (\begin{DoxyParamCaption}\item[{void $\ast$}]{haystack,  }\item[{\+\_\+\+\_\+u64}]{offset,  }\item[{size\+\_\+t}]{struct\+\_\+size,  }\item[{size\+\_\+t}]{array\+\_\+size,  }\item[{\+\_\+\+\_\+u32}]{needle }\end{DoxyParamCaption})}
+
+
+
+Search an array of structures for a particular 32 bit integer. 
+
+This function takes a pointer to an array of structures and an offset from the base struct to the 32 element in the structure, and then searches the array of structures for the first element of the array where $\ast$(struct\+\_\+ptr+offset) = needle.
+
+NOTE\+: For this function to work properly the number of array elements has to be divisible by 8
+
+By way of example if we have the following
+
+struct x \{ \+\_\+\+\_\+u32 a; \+\_\+\+\_\+u32 b; \+\_\+\+\_\+u32 c; \} struct x array\mbox{[}24\mbox{]}; If we wanted to search for the first entry where x.\+b = 10, we would pass the function with the following arguments\+: array -\/ which would be the pointer to the start of the array, 4 (element b is 4 bytes into the structure), sizeof(struct x) -\/ the size of structure for loop increments, 24 -\/ The number of elements in the array 10 -\/ the needle we are searching for 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em haystack} & -\/ Pointer to the start of the array \\
+\hline
+\mbox{\texttt{ in}}  & {\em offset} & -\/ An offset of the struct to the 32bit element we are searching \\
+\hline
+\mbox{\texttt{ in}}  & {\em struct\+\_\+size} & -\/ The size of each struct in the struct array \\
+\hline
+\mbox{\texttt{ in}}  & {\em array\+\_\+size} & -\/ The number of elements in the array \\
+\hline
+\mbox{\texttt{ in}}  & {\em needle} & -\/ The needle we are searching for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The array offset for the first matching instance or -\/1 if not found 
+\end{DoxyReturn}
