@@ -65,29 +65,6 @@ this function gets a variable encoded 64 bit integer from a 7 byte encoded strin
 \begin{DoxyReturn}{Returns}
 The number of bytes used to encode the extracted varint 
 \end{DoxyReturn}
-Zero out the varint before we start 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{*varint = 0}
-
-\end{DoxyCode}
-
-
-If the first byte does not have the high order bit set take that as a standalone byte, else transverse the memory pointed to by data until either we have 10 bytes or until the high order bit is not set 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordflow}{if} ((data[0] \& 128) == 128) \{}
-\DoxyCodeLine{  bytes[length] = data[data\_count];}
-\DoxyCodeLine{  byte\_count = 1;}
-\DoxyCodeLine{\} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{  \textcolor{keywordflow}{while} ((data[data\_count] \& 128) == 128) \{}
-\DoxyCodeLine{      bytes[length-\/-\/] = data[data\_count++];}
-\DoxyCodeLine{      byte\_count++;}
-\DoxyCodeLine{      \textcolor{keywordflow}{if} (byte\_count == 9)}
-\DoxyCodeLine{          \textcolor{keywordflow}{break};}
-\DoxyCodeLine{  \}}
-\DoxyCodeLine{  bytes[length] = data[data\_count];}
-\DoxyCodeLine{\}}
-
-\end{DoxyCode}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

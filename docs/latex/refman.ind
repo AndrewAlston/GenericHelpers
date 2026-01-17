@@ -19,14 +19,14 @@
     \subitem {read\_bgp\_prefix}, \hyperpage{11}
     \subitem {reverse\_array\_10}, \hyperpage{12}
   \item {decode\_helpers.h}, \hyperpage{12}
-    \subitem {dump\_buffer}, \hyperpage{14}
+    \subitem {dump\_buffer}, \hyperpage{13}
     \subitem {get\_var\_int}, \hyperpage{14}
-    \subitem {mem\_to\_msg}, \hyperpage{15}
+    \subitem {mem\_to\_msg}, \hyperpage{14}
     \subitem {read\_bgp\_prefix}, \hyperpage{15}
-    \subitem {reverse\_array\_10}, \hyperpage{16}
+    \subitem {reverse\_array\_10}, \hyperpage{15}
   \item {dump\_buffer}
     \subitem {decode\_helpers.c}, \hyperpage{10}
-    \subitem {decode\_helpers.h}, \hyperpage{14}
+    \subitem {decode\_helpers.h}, \hyperpage{13}
 
   \indexspace
 
@@ -38,7 +38,7 @@
 
   \item {mem\_to\_msg}
     \subitem {decode\_helpers.c}, \hyperpage{11}
-    \subitem {decode\_helpers.h}, \hyperpage{15}
+    \subitem {decode\_helpers.h}, \hyperpage{14}
   \item {msg\_code}
     \subitem {proto\_msg}, \hyperpage{8}
   \item {msg\_type}
@@ -68,6 +68,6 @@
     \subitem {proto\_msg}, \hyperpage{8}
   \item {reverse\_array\_10}
     \subitem {decode\_helpers.c}, \hyperpage{12}
-    \subitem {decode\_helpers.h}, \hyperpage{16}
+    \subitem {decode\_helpers.h}, \hyperpage{15}
 
 \end{theindex}
