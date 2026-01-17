@@ -6,3 +6,15 @@ as possible, so they can be used.
 
 All contributed code *MUST* be documented using DoxyGen typical format as this library is also created to help people
 learn and understand.
+
+Because of the doxygen configurations building this requires having texlive and pdflatex installed
+(On Ubuntu texlive-latext-base texlive-latex-extra texlive-latex-recommended and pdflatex packages)
+
+To build with ninja:
+
+cmake -G Ninja .
+ninja
+
+In docs/latex there is a Makefile, and running make in docs/latex after running ninja will generate a refman.pdf
+pdf reference manual.  Note that this requires pdflatex to be installed 
+
