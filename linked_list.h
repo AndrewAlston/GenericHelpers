@@ -5,7 +5,7 @@
 #ifndef GENERICHELPER_LINKED_LIST_H
 #define GENERICHELPER_LINKED_LIST_H
 
-/** @brief The route4trie structure is used in the creation of a 32 bit binary tree
+/** @brief The route4tree structure is used in the creation of a 32 bit binary tree
  */
 struct route4tree {
     struct route4tree *set; /**< Pointer used for when a binary bit is set */
@@ -29,7 +29,7 @@ struct route4tree *init_tree4(void);
  * @param[in] data A void pointer to the data to insert into the tree
  * @returns A route4tree structure at the inserted position in the tree
  */
-struct route4tree *insert_trie4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data);
+struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data);
 
 /** @brief This does a longest prefix match against the binary tree
  * @details This function will return at the deepest point in the tree that is matched
