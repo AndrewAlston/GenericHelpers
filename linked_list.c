@@ -165,3 +165,21 @@ void remove_node(struct route4tree *tree, __u32 address, __u8 cidr)
     } while (current != tree);
 }
 
+void free_tree4(struct route4tree *tree)
+{
+    //if the tree is null bail
+    if (!tree)
+        return;
+    
+    // recursively free the children
+    if(tree->set)
+        free_tree4(tree->set);
+    if(tree->unset)
+        free_tree4(tree->unset);
+    
+    if(tree->data)
+        free(tree->data);
+    
+    //finaly free the parent
+    free(tree);
+}

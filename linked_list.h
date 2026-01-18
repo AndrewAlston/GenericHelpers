@@ -63,4 +63,26 @@ struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr);
  */
 void remove_node(struct route4tree *tree, __u32 address, __u8 cidr);
 
+/**
+ * @brief Recursively frees an entire 32-bit binary tree.
+ *
+ * @details This function traverses the entire tree starting from the given node
+ * and frees all dynamically allocated memory for:
+ *   - child nodes (`set` and `unset` pointers)
+ *   - the `data` pointer stored at each node
+ *   - the node itself
+ *
+ * The traversal is done in a post-order manner (children first, then parent)
+ * to ensure no node is freed before its children, avoiding use-after-free errors.
+ *
+ * After calling this function on the root of a tree, all memory associated with
+ * that tree is released. The caller should not use any pointer to this tree or
+ * its nodes after this function returns.
+ *
+ * @param[in] tree A pointer to the root of a 32-bit binary tree (`struct route4tree`)
+ *                 to be freed. If the pointer is NULL, the function does nothing.
+ */
+void free_tree4(struct route4tree *tree);
+
+
 #endif //GENERICHELPER_LINKED_LIST_H
