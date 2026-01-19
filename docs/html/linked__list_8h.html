@@ -59,7 +59,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a8039c47f44e43b60d48281b765e115dd"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structroute4tree.html">route4tree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#a8039c47f44e43b60d48281b765e115dd">init_tree4</a> (void)</td></tr>
 <tr class="memdesc:a8039c47f44e43b60d48281b765e115dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a binary tree head entry.  <a href="linked__list_8h.html#a8039c47f44e43b60d48281b765e115dd">More...</a><br /></td></tr>
 <tr class="separator:a8039c47f44e43b60d48281b765e115dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d4559d6f415d3d1c357f6242ce3c8db"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structroute4tree.html">route4tree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#a8d4559d6f415d3d1c357f6242ce3c8db">insert_tree4</a> (struct <a class="el" href="structroute4tree.html">route4tree</a> *tree, __u32 addr, __u8 cidr, void *data)</td></tr>
+<tr class="memitem:a8d4559d6f415d3d1c357f6242ce3c8db"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structroute4tree.html">route4tree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#a8d4559d6f415d3d1c357f6242ce3c8db">insert_tree4</a> (struct <a class="el" href="structroute4tree.html">route4tree</a> *tree, __u32 addr, __u8 cidr, void *<a class="el" href="structdata.html">data</a>)</td></tr>
 <tr class="memdesc:a8d4559d6f415d3d1c357f6242ce3c8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">This inserts an entry into a binary tree.  <a href="linked__list_8h.html#a8d4559d6f415d3d1c357f6242ce3c8db">More...</a><br /></td></tr>
 <tr class="separator:a8d4559d6f415d3d1c357f6242ce3c8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbb768f4a8298bf1c98458904170e83c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structroute4tree.html">route4tree</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#afbb768f4a8298bf1c98458904170e83c">lookup_lpm</a> (struct <a class="el" href="structroute4tree.html">route4tree</a> *tree, __u32 addr, __u8 cidr)</td></tr>
@@ -71,13 +71,13 @@ Functions</h2></td></tr>
 <tr class="memitem:adcb6ddddd0010e932c2c8d7057cb6444"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#adcb6ddddd0010e932c2c8d7057cb6444">remove_node</a> (struct <a class="el" href="structroute4tree.html">route4tree</a> *tree, __u32 address, __u8 cidr)</td></tr>
 <tr class="memdesc:adcb6ddddd0010e932c2c8d7057cb6444"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function removes a node from the tree.  <a href="linked__list_8h.html#adcb6ddddd0010e932c2c8d7057cb6444">More...</a><br /></td></tr>
 <tr class="separator:adcb6ddddd0010e932c2c8d7057cb6444"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f9f69d0fb743e4ed569c4749cc3702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#ad4f9f69d0fb743e4ed569c4749cc3702">free_tree4</a> (struct <a class="el" href="structroute4tree.html">route4tree</a> *tree)</td></tr>
-<tr class="memdesc:ad4f9f69d0fb743e4ed569c4749cc3702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees an entire 32-bit binary tree using post-order traversal.  <a href="linked__list_8h.html#ad4f9f69d0fb743e4ed569c4749cc3702">More...</a><br /></td></tr>
-<tr class="separator:ad4f9f69d0fb743e4ed569c4749cc3702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7cb413164f2ed7b1c62f1840f1eae04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="linked__list_8h.html#ac7cb413164f2ed7b1c62f1840f1eae04">free_tree4</a> (struct <a class="el" href="structroute4tree.html">route4tree</a> **tree)</td></tr>
+<tr class="memdesc:ac7cb413164f2ed7b1c62f1840f1eae04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees an entire 32-bit binary tree using post-order traversal.  <a href="linked__list_8h.html#ac7cb413164f2ed7b1c62f1840f1eae04">More...</a><br /></td></tr>
+<tr class="separator:ac7cb413164f2ed7b1c62f1840f1eae04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ad4f9f69d0fb743e4ed569c4749cc3702"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4f9f69d0fb743e4ed569c4749cc3702">&#9670;&nbsp;</a></span>free_tree4()</h2>
+<a id="ac7cb413164f2ed7b1c62f1840f1eae04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cb413164f2ed7b1c62f1840f1eae04">&#9670;&nbsp;</a></span>free_tree4()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -85,7 +85,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void free_tree4 </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structroute4tree.html">route4tree</a> *&#160;</td>
+          <td class="paramtype">struct <a class="el" href="structroute4tree.html">route4tree</a> **&#160;</td>
           <td class="paramname"><em>tree</em></td><td>)</td>
           <td></td>
         </tr>
@@ -102,7 +102,7 @@ Functions</h2></td></tr>
 <p>After calling this function on the root of a tree, all memory associated with that tree is released. The caller must not use any pointer to this tree or its nodes after this function returns.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>A pointer to the root of a 32-bit binary tree (<code>struct <a class="el" href="structroute4tree.html" title="The route4tree structure is used in the creation of a 32 bit binary tree.">route4tree</a></code>) to be freed. If the pointer is NULL, the function does nothing. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tree</td><td>A double pointer to the root of a 32-bit binary tree (<code>struct <a class="el" href="structroute4tree.html" title="The route4tree structure is used in the creation of a 32 bit binary tree.">route4tree</a></code>) to be freed. If the inner pointer is NULL, the function does nothing. </td></tr>
   </table>
   </dd>
 </dl>

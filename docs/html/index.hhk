@@ -21,7 +21,26 @@
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a48959f7ebcce5a314029642bcc053d84"><param name="Name" value="prefix"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a1756bf4d8d23fc3d6eda338d0928e447"><param name="Name" value="cidr"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a1756bf4d8d23fc3d6eda338d0928e447"><param name="Name" value="bgp_ipv4_prefix"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html#a8fef22a0018fe0514aa64a3c27ea3681"><param name="Name" value="cidr"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html#a8fef22a0018fe0514aa64a3c27ea3681"><param name="Name" value="data"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html"><param name="Name" value="data"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html"><param name="Name" value="data"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html#a8fef22a0018fe0514aa64a3c27ea3681"><param name="Name" value="cidr"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html"><param name="Name" value="data"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html#aed667f18dfafdd59377fbf24712ec5ae"><param name="Name" value="prefix"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structroute4tree.html#a051f5eab0b8d55dd76f58164655a82e3"><param name="Name" value="data"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structroute4tree.html#a051f5eab0b8d55dd76f58164655a82e3"><param name="Name" value="route4tree"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="decode__helpers_8c.html"><param name="Name" value="decode_helpers.c"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="decode__helpers_8c.html#a9df7d5bf99061b8754aad86196f71cde"><param name="Name" value="dump_buffer"></OBJECT>
@@ -102,13 +121,13 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="decode__helpers_8h.html#a0342ce388a9816dfda3296af947325d2"><param name="Name" value="decode_helpers.h"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#ad4f9f69d0fb743e4ed569c4749cc3702"><param name="Name" value="free_tree4"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#ac7cb413164f2ed7b1c62f1840f1eae04"><param name="Name" value="free_tree4"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#ad4f9f69d0fb743e4ed569c4749cc3702"><param name="Name" value="linked_list.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#ac7cb413164f2ed7b1c62f1840f1eae04"><param name="Name" value="linked_list.c"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#ad4f9f69d0fb743e4ed569c4749cc3702"><param name="Name" value="free_tree4"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#ac7cb413164f2ed7b1c62f1840f1eae04"><param name="Name" value="free_tree4"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#ad4f9f69d0fb743e4ed569c4749cc3702"><param name="Name" value="linked_list.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#ac7cb413164f2ed7b1c62f1840f1eae04"><param name="Name" value="linked_list.h"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="decode__helpers_8c.html#aaf62cf9fd7a378b8e7e6c5e11ef67975"><param name="Name" value="get_var_int"></OBJECT>
   <UL>
@@ -136,7 +155,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html"><param name="Name" value="linked_list.c"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#ad4f9f69d0fb743e4ed569c4749cc3702"><param name="Name" value="free_tree4"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#ac7cb413164f2ed7b1c62f1840f1eae04"><param name="Name" value="free_tree4"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html"><param name="Name" value="linked_list.c"></OBJECT>
   <UL>
@@ -160,7 +179,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html"><param name="Name" value="linked_list.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#ad4f9f69d0fb743e4ed569c4749cc3702"><param name="Name" value="free_tree4"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#ac7cb413164f2ed7b1c62f1840f1eae04"><param name="Name" value="free_tree4"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html"><param name="Name" value="linked_list.h"></OBJECT>
   <UL>
@@ -212,6 +231,13 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a1ac60d49a4d90a359ad397ef35f245f8"><param name="Name" value="next"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structroute4tree.html#a753b77a34283a46b0759b037a7cbc46d"><param name="Name" value="parent"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a48959f7ebcce5a314029642bcc053d84"><param name="Name" value="prefix"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a48959f7ebcce5a314029642bcc053d84"><param name="Name" value="bgp_ipv4_prefix"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html#aed667f18dfafdd59377fbf24712ec5ae"><param name="Name" value="prefix"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="structdata.html#aed667f18dfafdd59377fbf24712ec5ae"><param name="Name" value="data"></OBJECT>
+  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structproto__msg.html"><param name="Name" value="proto_msg"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structproto__msg.html"><param name="Name" value="proto_msg"></OBJECT>
   <UL>

@@ -4,6 +4,7 @@
 
 #include <stdlib.h>
 #include <asm-generic/types.h>
+#include <stdio.h>
 #include "linked_list.h"
 
 struct route4tree *init_tree4(void)
@@ -59,8 +60,8 @@ struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, 
 struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr)
 {
     struct route4tree *current = tree;
-    for (int i = 0; i < cidr; i++) {
-        __u32 bit = (addr >> (31-i)&1);
+    for (int i = cidr-1; i >= 0; i--) {
+        __u32 bit = (addr >> i)&1;
         if (bit) {
             if (current->set) {
                 current = current->set;
@@ -68,7 +69,6 @@ struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr)
             }
             if (current->data)
                 return current;
-            return NULL;
         }
         if (current->unset) {
             current = current->unset;
@@ -76,8 +76,9 @@ struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr)
         }
         if (current->data)
             return current;
-        return NULL;
     }
+    if (current && current->data)
+        return current;
     return NULL;
 }
 
@@ -164,45 +165,40 @@ void remove_node(struct route4tree *tree, __u32 address, __u8 cidr)
     } while (current != tree);
 }
 
-void free_tree4(struct route4tree *tree)
+void free_tree4(struct route4tree **tree)
 {
-    struct route4tree *current = tree;
-
+    struct route4tree *current = *tree;
+    if (!current)
+        return;
     while(current) {
-        //descend as far as possible
+        // Transverse down as far as we can
         if(current->set) {
             current = current->set;
             continue;
         }
-        if(current->unset) {
+        if (current->unset) {
             current = current->unset;
             continue;
         }
-
-        if(current->data) {
+        // Note this will only happen if there are no set or unset because of the above
+        // continuations
+        if (current == *tree) {
+            free(*tree);
+            *tree = NULL;
+            return;
+        }
+        if (current->data) {
             free(current->data);
             current->data = NULL;
         }
-
-        if(current->parent) {
-            //used same logic as remove_node above
-            // Store the current entry
-            struct route4tree *tmp = current;
-            // Traverse up the tree
-            current = current->parent;
-            //  If the previously saved parent entry matches the set entry, free it up
-            if (tmp == current->set) {
-                free(current->set);
-                current->set = NULL;
-                // If the previously saved parent entry matches unset entry, free it up
-            } else if (tmp == current->unset) {
-                free(current->unset);
-                current->unset = NULL;
-            }
-            //if it doesnt have parent means its the root
-        }else {
-            free(current);
-            break;
+        struct route4tree *tmp = current;
+        current = current->parent;
+        if (tmp == current->set) {
+            free(current->set);
+            current->set = NULL;
+        } else if (tmp == current->unset) {
+            free(current->unset);
+            current->unset = NULL;
         }
     }
 }
