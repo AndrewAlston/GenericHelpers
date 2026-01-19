@@ -31,3 +31,4 @@ add_library(generichelper SHARED
         linked_list.h
         accelerations.c
         accelerations.h)
+add_subdirectory(tests)

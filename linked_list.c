@@ -165,3 +165,45 @@ void remove_node(struct route4tree *tree, __u32 address, __u8 cidr)
     } while (current != tree);
 }
 
+void free_tree4(struct route4tree *tree)
+{
+    struct route4tree *current = tree;
+
+    while(current) {
+        //descend as far as possible
+        if(current->set) {
+            current = current->set;
+            continue;
+        }
+        if(current->unset) {
+            current = current->unset;
+            continue;
+        }
+
+        if(current->data) {
+            free(current->data);
+            current->data = NULL;
+        }
+
+        if(current->parent) {
+            //used same logic as remove_node above
+            // Store the current entry
+            struct route4tree *tmp = current;
+            // Traverse up the tree
+            current = current->parent;
+            //  If the previously saved parent entry matches the set entry, free it up
+            if (tmp == current->set) {
+                free(current->set);
+                current->set = NULL;
+                // If the previously saved parent entry matches unset entry, free it up
+            } else if (tmp == current->unset) {
+                free(current->unset);
+                current->unset = NULL;
+            }
+            //if it doesnt have parent means its the root
+        }else {
+            free(current);
+            break;
+        }
+    }
+}
