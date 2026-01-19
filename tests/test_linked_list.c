@@ -5,11 +5,15 @@
 #include <arpa/inet.h>
 #include "linked_list.h"
 
+/** @brief Basic structure used to add test data to the tree
+ */
 struct data {
-    __u32 prefix;
-    __u8 cidr;
+    __u32 prefix; /**< Prefix we are adding to the tree */
+    __u8 cidr; /**< CIDR of the added prefix */
 };
 
+/** @brief This code exists purely to test the functionality of the linked list code
+ */
 int main(void)
 {
     char prefix_str[INET_ADDRSTRLEN] = {0};
