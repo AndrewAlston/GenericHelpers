@@ -15,7 +15,7 @@ struct route4tree *init_tree4(void)
     return tree;
 }
 
-struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data)
+struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data, callback cb)
 {
     if (!data)
         return NULL;
@@ -49,10 +49,17 @@ struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, 
         }
     }
     if (!current->data) {
-        current->data = data;
+        if (cb)
+            cb(current, data);
+        else
+            current->data = data;
     } else {
-        free(current->data);
-        current->data = data;
+        if (cb)
+            cb(current, data);
+        else {
+            free(current->data);
+            current->data = data;
+        }
     }
     return current;
 }
@@ -105,7 +112,7 @@ struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr)
     return NULL;
 }
 
-void remove_node(struct route4tree *tree, __u32 address, __u8 cidr)
+void remove_node(struct route4tree *tree, __u32 address, __u8 cidr, void *data, callback_remove cb)
 {
     // Swap the address to little endian order
     struct route4tree *current = tree;
@@ -133,8 +140,12 @@ void remove_node(struct route4tree *tree, __u32 address, __u8 cidr)
         // If we have an exact match - we need to handle removing a single path
         if (current_cidr == cidr) {
             if (current->data) {
-                free(current->data);
-                current->data = NULL;
+                if (cb && data) {
+                    cb(current, current->data, data);
+                } else {
+                    free(current->data);
+                    current->data = NULL;
+                }
             }
             // If there are child entries bail
             if (current->set || current->unset)

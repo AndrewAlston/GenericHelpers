@@ -39,10 +39,10 @@ int main(void)
     lpm_lookup1->prefix = htonl(0x0A0B0000); lpm_lookup1->cidr = 24;
     lpm_lookup2->prefix = htonl(0xC0A8B900); lpm_lookup2->cidr = 24;
 
-    insert_tree4(tree, test_data1->prefix, test_data1->cidr, test_data1);
-    insert_tree4(tree, test_data2->prefix, test_data2->cidr, test_data2);
-    insert_tree4(tree, test_data3->prefix, test_data3->cidr, test_data3);
-    insert_tree4(tree, test_data4->prefix, test_data4->cidr, test_data4);
+    insert_tree4(tree, test_data1->prefix, test_data1->cidr, test_data1, NULL);
+    insert_tree4(tree, test_data2->prefix, test_data2->cidr, test_data2, NULL);
+    insert_tree4(tree, test_data3->prefix, test_data3->cidr, test_data3, NULL);
+    insert_tree4(tree, test_data4->prefix, test_data4->cidr, test_data4, NULL);
     struct route4tree *test_node = NULL;
     __u32 pfx = 0; __u8 cidr = 0;
     for (int i = 0; i < 6; i++) {
@@ -93,10 +93,10 @@ int main(void)
     printf("Attempting to free NULL tree\n");
     free_tree4(&tree);
     printf("free_tree4 executed without crash.\n");
-    if (lpm_lookup1)
-        free(lpm_lookup1);
-    if (lpm_lookup2)
-        free(lpm_lookup2);
+    // These won't be free'd up by freeing the tree, because they are not directly in the tree
+    // Exact matches will have their pointers free'd on tree cleanup
+    free(lpm_lookup1);
+    free(lpm_lookup2);
     return EXIT_SUCCESS;
 cleanup:
     if (test_data1)

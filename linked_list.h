@@ -5,6 +5,7 @@
 #ifndef GENERICHELPER_LINKED_LIST_H
 #define GENERICHELPER_LINKED_LIST_H
 
+
 /** @brief The route4tree structure is used in the creation of a 32 bit binary tree
  */
 struct route4tree {
@@ -13,6 +14,12 @@ struct route4tree {
     struct route4tree *parent; /**< Pointer to the parent entry of the tree */
     void *data; /**< Void pointer to data to be stored in the tree */
 };
+
+/** @def callback
+ * @brief This is used for callbacks on insert_tree4 in case of special processing
+ */
+typedef int(callback)(struct route4tree *, void *);
+typedef int(callback_remove)(struct route4tree *, void *, void *);
 
 /** @brief Initialize a binary tree head entry
  * @returns A pointer to the head of a binary tree
@@ -27,9 +34,10 @@ struct route4tree *init_tree4(void);
  * @param[in] addr A 32 bit address to be inserted into the tree
  * @param[in] cidr An integer representing how many bits of the address to insert into the tree
  * @param[in] data A void pointer to the data to insert into the tree
+ * @param[in] cb A Function pointer used for inserting data - if NULL the tree data pointer will simply point to the data parameter
  * @returns A route4tree structure at the inserted position in the tree
  */
-struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data);
+struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data, callback cb);
 
 /** @brief This does a longest prefix match against the binary tree
  * @details This function will return at the deepest point in the tree that is matched
@@ -60,8 +68,11 @@ struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr);
  * @param[in] tree The head of an initialized binary tree
  * @param[in] address The address to lookup in the tree - This should be in big endian order
  * @param[in] cidr The depth to transverse before we start back tracing and freeing
+ * @param[in] data If this is set AND callback is set, the callback is used with the node data and
+ * the supplied data to determine removal
+ * @param[in] cb If set call the callback removal function with the node data pointer and the supplied data pointer
  */
-void remove_node(struct route4tree *tree, __u32 address, __u8 cidr);
+void remove_node(struct route4tree *tree, __u32 address, __u8 cidr, void *data, callback_remove cb);
 
 /**
  * @brief Frees an entire 32-bit binary tree using post-order traversal.
