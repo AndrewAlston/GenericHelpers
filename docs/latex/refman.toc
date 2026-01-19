@@ -53,15 +53,15 @@
 \contentsline {subsection}{\numberline {5.5.1}Function Documentation}{20}{subsection.5.5.1}%
 \contentsline {subsubsection}{\numberline {5.5.1.1}init\_tree4()}{20}{subsubsection.5.5.1.1}%
 \contentsline {subsubsection}{\numberline {5.5.1.2}insert\_tree4()}{20}{subsubsection.5.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.5.1.3}lookup\_exact()}{20}{subsubsection.5.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.5.1.3}lookup\_exact()}{21}{subsubsection.5.5.1.3}%
 \contentsline {subsubsection}{\numberline {5.5.1.4}lookup\_lpm()}{21}{subsubsection.5.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.5.1.5}remove\_node()}{21}{subsubsection.5.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.5.1.5}remove\_node()}{22}{subsubsection.5.5.1.5}%
 \contentsline {section}{\numberline {5.6}linked\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{22}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Function Documentation}{22}{subsection.5.6.1}%
-\contentsline {subsubsection}{\numberline {5.6.1.1}init\_tree4()}{22}{subsubsection.5.6.1.1}%
-\contentsline {subsubsection}{\numberline {5.6.1.2}insert\_trie4()}{22}{subsubsection.5.6.1.2}%
+\contentsline {subsection}{\numberline {5.6.1}Function Documentation}{23}{subsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.1}init\_tree4()}{23}{subsubsection.5.6.1.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.2}insert\_tree4()}{23}{subsubsection.5.6.1.2}%
 \contentsline {subsubsection}{\numberline {5.6.1.3}lookup\_exact()}{23}{subsubsection.5.6.1.3}%
-\contentsline {subsubsection}{\numberline {5.6.1.4}lookup\_lpm()}{23}{subsubsection.5.6.1.4}%
+\contentsline {subsubsection}{\numberline {5.6.1.4}lookup\_lpm()}{24}{subsubsection.5.6.1.4}%
 \contentsline {subsubsection}{\numberline {5.6.1.5}remove\_node()}{24}{subsubsection.5.6.1.5}%
-\contentsline {section}{\numberline {5.7}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{24}{section.5.7}%
-\contentsline {chapter}{Index}{25}{section*.17}%
+\contentsline {section}{\numberline {5.7}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{25}{section.5.7}%
+\contentsline {chapter}{Index}{27}{section*.17}%

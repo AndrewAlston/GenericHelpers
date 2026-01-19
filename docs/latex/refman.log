@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.12)  17 JAN 2026 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.1.12)  17 JAN 2026 23:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -931,7 +931,7 @@ _graph.pdf
 pdfTeX warning: pdflatex (file ./structroute4tree__coll__graph.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<structroute4tree__coll__graph.pdf, id=427, 218.8175pt x 113.42375pt>
+<structroute4tree__coll__graph.pdf, id=429, 218.8175pt x 113.42375pt>
 File: structroute4tree__coll__graph.pdf Graphic file (type pdf)
 <use structroute4tree__coll__graph.pdf>
 Package pdftex.def Info: structroute4tree__coll__graph.pdf  used on input line 
@@ -969,7 +969,7 @@ pdfTeX warning: pdflatex (file ./decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11e
 f67975_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a 
 single page
 >
-<decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph.pdf, id=514, 313.1
+<decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph.pdf, id=517, 313.1
 7pt x 100.375pt>
 File: decode__helpers_8c_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph.pdf Graphic f
 ile (type pdf)
@@ -983,7 +983,7 @@ Underfull \hbox (badness 10000) detected at line 117
  []
 
  <./decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0_cgraph.pdf>
-<decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0_cgraph.pdf, id=532, 307.1
+<decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0_cgraph.pdf, id=535, 307.1
 475pt x 100.375pt>
 File: decode__helpers_8c_a224ae6354763d1d7e15122ecbe5985e0_cgraph.pdf Graphic f
 ile (type pdf)
@@ -1007,7 +1007,7 @@ pdfTeX warning: pdflatex (file ./decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11e
 f67975_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a 
 single page
 >
-<decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph.pdf, id=588, 313.1
+<decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph.pdf, id=591, 313.1
 7pt x 100.375pt>
 File: decode__helpers_8h_aaf62cf9fd7a378b8e7e6c5e11ef67975_cgraph.pdf Graphic f
 ile (type pdf)
@@ -1026,7 +1026,7 @@ pdfTeX warning: pdflatex (file ./decode__helpers_8h_a224ae6354763d1d7e15122ecbe
 5985e0_cgraph.pdf): PDF inclusion: multiple pdfs with page group included in a 
 single page
 >
-<decode__helpers_8h_a224ae6354763d1d7e15122ecbe5985e0_cgraph.pdf, id=598, 307.1
+<decode__helpers_8h_a224ae6354763d1d7e15122ecbe5985e0_cgraph.pdf, id=601, 307.1
 475pt x 100.375pt>
 File: decode__helpers_8h_a224ae6354763d1d7e15122ecbe5985e0_cgraph.pdf Graphic f
 ile (type pdf)
@@ -1045,50 +1045,56 @@ Underfull \hbox (badness 10000) detected at line 29
  []
 
 [20]
-Underfull \hbox (badness 10000) detected at line 57
+Underfull \hbox (badness 10000) detected at line 53
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 79
+Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
 
-[21]) (./linked__list_8h.tex
+[21]
+Underfull \hbox (badness 10000) detected at line 97
+[][][]
+ []
+
+) (./linked__list_8h.tex [22]
 Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
 
-[22]
+
 Underfull \hbox (badness 10000) detected at line 58
 [][][]
  []
 
-
+[23]
 Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
 
-[23]
+
 Underfull \hbox (badness 10000) detected at line 102
 [][][]
  []
 
-) (./README_8md.tex) [24] (./refman.ind [25
+[24]) (./README_8md.tex) [25] [26
+
+] (./refman.ind [27
 
 
-
-] [26
+] [28
 
 ]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 38FDBC1FF36F479F0280AE8474F206DA;12402.
+(rerunfilecheck)             Checksum: A437114659FAC641456081E80A86CA9A;12402.
  ) 
 Here is how much of TeX's memory you used:
- 17629 strings out of 480247
- 285815 string characters out of 5896151
- 597069 words of memory out of 5000000
- 35048 multiletter control sequences out of 15000+600000
+ 17633 strings out of 480247
+ 285847 string characters out of 5896151
+ 597108 words of memory out of 5000000
+ 35049 multiletter control sequences out of 15000+600000
  528206 words of font info for 97 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,16n,117p,893b,633s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1101,10 +1107,10 @@ rier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (30 pages, 174693 bytes).
+Output written on refman.pdf (32 pages, 176579 bytes).
 PDF statistics:
- 883 PDF objects out of 1000 (max. 8388607)
- 805 compressed objects within 9 object streams
- 179 named destinations out of 1000 (max. 500000)
+ 901 PDF objects out of 1000 (max. 8388607)
+ 821 compressed objects within 9 object streams
+ 182 named destinations out of 1000 (max. 500000)
  554 words of extra memory for PDF output out of 10000 (max. 10000000)
 

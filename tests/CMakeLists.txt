@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 4.1.2)
+set(CMAKE_GENERATOR Ninja)
 add_executable(test_linked_list
     test_linked_list.c
 )

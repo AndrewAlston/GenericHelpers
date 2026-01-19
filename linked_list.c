@@ -107,12 +107,11 @@ struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr)
 void remove_node(struct route4tree *tree, __u32 address, __u8 cidr)
 {
     // Swap the address to little endian order
-    __u32 addr = __bswap_32(address);
     struct route4tree *current = tree;
     // Iterate to the last known entry;
     int current_cidr = 0;
-    for (int i = 0; i < cidr; i++) {
-        __u32 bit = (addr >> (31-i))&1;
+    for (int i = cidr-1; i >= 0; i--) {
+        __u32 bit = (address >> (31-i))&1;
         if (bit) {
             if (current->set) {
                 current_cidr++;

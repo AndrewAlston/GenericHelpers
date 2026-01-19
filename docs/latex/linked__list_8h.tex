@@ -4,23 +4,51 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}}
-\begin{DoxyCompactList}\small\item\em The route4trie structure is used in the creation of a 32 bit binary tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structroute4tree}{route4tree}} structure is used in the creation of a 32 bit binary tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_a8039c47f44e43b60d48281b765e115dd}{init\+\_\+tree4}} (void)
 \begin{DoxyCompactList}\small\item\em Initialize a binary tree head entry. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_a84fc197413e0c247730c2d500200ddc8}{insert\+\_\+trie4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$data)
+struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_a8d4559d6f415d3d1c357f6242ce3c8db}{insert\+\_\+tree4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$data)
 \begin{DoxyCompactList}\small\item\em This inserts an entry into a binary tree. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_afbb768f4a8298bf1c98458904170e83c}{lookup\+\_\+lpm}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr)
 \begin{DoxyCompactList}\small\item\em This does a longest prefix match against the binary tree. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_abdc2d663510c6c5d559aeaab82eda7bd}{lookup\+\_\+exact}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr)
 \begin{DoxyCompactList}\small\item\em This does an exact match lookup against the tree. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{linked__list_8h_adcb6ddddd0010e932c2c8d7057cb6444}{remove\+\_\+node}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 address, \+\_\+\+\_\+u8 cidr)
-\begin{DoxyCompactList}\small\item\em This function removes a node from the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function removes a node from the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{linked__list_8h_ad4f9f69d0fb743e4ed569c4749cc3702}{free\+\_\+tree4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree)
+\begin{DoxyCompactList}\small\item\em Frees an entire 32-\/bit binary tree using post-\/order traversal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{linked__list_8h_ad4f9f69d0fb743e4ed569c4749cc3702}\label{linked__list_8h_ad4f9f69d0fb743e4ed569c4749cc3702}} 
+\index{linked\_list.h@{linked\_list.h}!free\_tree4@{free\_tree4}}
+\index{free\_tree4@{free\_tree4}!linked\_list.h@{linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{free\_tree4()}{free\_tree4()}}
+{\footnotesize\ttfamily void free\+\_\+tree4 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+
+
+Frees an entire 32-\/bit binary tree using post-\/order traversal. 
+
+This function traverses the entire tree starting from the given node and frees all dynamically allocated memory for\+:
+\begin{DoxyItemize}
+\item child nodes ({\ttfamily set} and {\ttfamily unset} pointers)
+\item the {\ttfamily data} pointer stored at each node
+\item the node itself
+\end{DoxyItemize}
+
+The traversal is performed in a post-\/order manner (children first, then parent) to ensure no node is freed before its children, avoiding use-\/after-\/free errors. Parent pointers are used to explicitly walk back up the tree without recursion.
+
+After calling this function on the root of a tree, all memory associated with that tree is released. The caller must not use any pointer to this tree or its nodes after this function returns.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tree} & A pointer to the root of a 32-\/bit binary tree ({\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}}) to be freed. If the pointer is NULL, the function does nothing. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{linked__list_8h_a8039c47f44e43b60d48281b765e115dd}\label{linked__list_8h_a8039c47f44e43b60d48281b765e115dd}} 
 \index{linked\_list.h@{linked\_list.h}!init\_tree4@{init\_tree4}}
 \index{init\_tree4@{init\_tree4}!linked\_list.h@{linked\_list.h}}
@@ -34,11 +62,11 @@ Initialize a binary tree head entry.
 \begin{DoxyReturn}{Returns}
 A pointer to the head of a binary tree 
 \end{DoxyReturn}
-\mbox{\Hypertarget{linked__list_8h_a84fc197413e0c247730c2d500200ddc8}\label{linked__list_8h_a84fc197413e0c247730c2d500200ddc8}} 
-\index{linked\_list.h@{linked\_list.h}!insert\_trie4@{insert\_trie4}}
-\index{insert\_trie4@{insert\_trie4}!linked\_list.h@{linked\_list.h}}
-\doxysubsubsection{\texorpdfstring{insert\_trie4()}{insert\_trie4()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ insert\+\_\+trie4 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{linked__list_8h_a8d4559d6f415d3d1c357f6242ce3c8db}\label{linked__list_8h_a8d4559d6f415d3d1c357f6242ce3c8db}} 
+\index{linked\_list.h@{linked\_list.h}!insert\_tree4@{insert\_tree4}}
+\index{insert\_tree4@{insert\_tree4}!linked\_list.h@{linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{insert\_tree4()}{insert\_tree4()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ insert\+\_\+tree4 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
 
 
 
