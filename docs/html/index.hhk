@@ -20,6 +20,8 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a48959f7ebcce5a314029642bcc053d84"><param name="Name" value="prefix"></OBJECT>
   </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#aba031064c2939b045daae6e376bf9534"><param name="Name" value="callback"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#abd85e70fa30638b7c33748ab18bd615a"><param name="Name" value="callback_remove"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a1756bf4d8d23fc3d6eda338d0928e447"><param name="Name" value="cidr"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="structbgp__ipv4__prefix.html#a1756bf4d8d23fc3d6eda338d0928e447"><param name="Name" value="bgp_ipv4_prefix"></OBJECT>
@@ -145,13 +147,13 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#a8039c47f44e43b60d48281b765e115dd"><param name="Name" value="linked_list.h"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#a8d4559d6f415d3d1c357f6242ce3c8db"><param name="Name" value="insert_tree4"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#afe6585b2b195138bee10c6d6fd662af3"><param name="Name" value="insert_tree4"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#a8d4559d6f415d3d1c357f6242ce3c8db"><param name="Name" value="linked_list.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#afe6585b2b195138bee10c6d6fd662af3"><param name="Name" value="linked_list.c"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#a8d4559d6f415d3d1c357f6242ce3c8db"><param name="Name" value="insert_tree4"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#afe6585b2b195138bee10c6d6fd662af3"><param name="Name" value="insert_tree4"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#a8d4559d6f415d3d1c357f6242ce3c8db"><param name="Name" value="linked_list.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#afe6585b2b195138bee10c6d6fd662af3"><param name="Name" value="linked_list.h"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html"><param name="Name" value="linked_list.c"></OBJECT>
   <UL>
@@ -163,7 +165,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html"><param name="Name" value="linked_list.c"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#a8d4559d6f415d3d1c357f6242ce3c8db"><param name="Name" value="insert_tree4"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#afe6585b2b195138bee10c6d6fd662af3"><param name="Name" value="insert_tree4"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html"><param name="Name" value="linked_list.c"></OBJECT>
   <UL>
@@ -175,7 +177,15 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html"><param name="Name" value="linked_list.c"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#adcb6ddddd0010e932c2c8d7057cb6444"><param name="Name" value="remove_node"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#a21c5fa86cae714013d79e739c14575c2"><param name="Name" value="remove_node"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html"><param name="Name" value="linked_list.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#aba031064c2939b045daae6e376bf9534"><param name="Name" value="callback"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html"><param name="Name" value="linked_list.h"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#abd85e70fa30638b7c33748ab18bd615a"><param name="Name" value="callback_remove"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html"><param name="Name" value="linked_list.h"></OBJECT>
   <UL>
@@ -187,7 +197,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html"><param name="Name" value="linked_list.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#a8d4559d6f415d3d1c357f6242ce3c8db"><param name="Name" value="insert_tree4"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#afe6585b2b195138bee10c6d6fd662af3"><param name="Name" value="insert_tree4"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html"><param name="Name" value="linked_list.h"></OBJECT>
   <UL>
@@ -199,7 +209,7 @@
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html"><param name="Name" value="linked_list.h"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#adcb6ddddd0010e932c2c8d7057cb6444"><param name="Name" value="remove_node"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#a21c5fa86cae714013d79e739c14575c2"><param name="Name" value="remove_node"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#abdc2d663510c6c5d559aeaab82eda7bd"><param name="Name" value="lookup_exact"></OBJECT>
   <UL>
@@ -259,13 +269,13 @@
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="decode__helpers_8h.html#a3edfbd2b78d141f355c240b7b1f52e18"><param name="Name" value="decode_helpers.h"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#adcb6ddddd0010e932c2c8d7057cb6444"><param name="Name" value="remove_node"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#a21c5fa86cae714013d79e739c14575c2"><param name="Name" value="remove_node"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#adcb6ddddd0010e932c2c8d7057cb6444"><param name="Name" value="linked_list.c"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8c.html#a21c5fa86cae714013d79e739c14575c2"><param name="Name" value="linked_list.c"></OBJECT>
   </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#adcb6ddddd0010e932c2c8d7057cb6444"><param name="Name" value="remove_node"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#a21c5fa86cae714013d79e739c14575c2"><param name="Name" value="remove_node"></OBJECT>
   <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#adcb6ddddd0010e932c2c8d7057cb6444"><param name="Name" value="linked_list.h"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="linked__list_8h.html#a21c5fa86cae714013d79e739c14575c2"><param name="Name" value="linked_list.h"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="structproto__msg.html#a161a6d861e51532164a825c5f64f6ba6"><param name="Name" value="result"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="decode__helpers_8c.html#a298daf8160cdf855a5ae27d4fb55b405"><param name="Name" value="reverse_array_10"></OBJECT>

@@ -101,10 +101,10 @@
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="free_tree4"><param name="Local" value="linked__list_8c.html#ac7cb413164f2ed7b1c62f1840f1eae04"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="init_tree4"><param name="Local" value="linked__list_8c.html#a8039c47f44e43b60d48281b765e115dd"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="insert_tree4"><param name="Local" value="linked__list_8c.html#a8d4559d6f415d3d1c357f6242ce3c8db"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="insert_tree4"><param name="Local" value="linked__list_8c.html#afe6585b2b195138bee10c6d6fd662af3"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="lookup_exact"><param name="Local" value="linked__list_8c.html#abdc2d663510c6c5d559aeaab82eda7bd"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="lookup_lpm"><param name="Local" value="linked__list_8c.html#afbb768f4a8298bf1c98458904170e83c"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="remove_node"><param name="Local" value="linked__list_8c.html#adcb6ddddd0010e932c2c8d7057cb6444"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="remove_node"><param name="Local" value="linked__list_8c.html#a21c5fa86cae714013d79e739c14575c2"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="linked_list.h"><param name="Local" value="linked__list_8h.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
@@ -115,18 +115,21 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="set"><param name="Local" value="structroute4tree.html#a859ffd9589daa7e35ca2bdd2d42dcdc0"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="unset"><param name="Local" value="structroute4tree.html#aaa1c8328ca443203b72496440a4b8d85"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="callback"><param name="Local" value="linked__list_8h.html#aba031064c2939b045daae6e376bf9534"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="callback_remove"><param name="Local" value="linked__list_8h.html#abd85e70fa30638b7c33748ab18bd615a"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="free_tree4"><param name="Local" value="linked__list_8h.html#ac7cb413164f2ed7b1c62f1840f1eae04"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="init_tree4"><param name="Local" value="linked__list_8h.html#a8039c47f44e43b60d48281b765e115dd"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="insert_tree4"><param name="Local" value="linked__list_8h.html#a8d4559d6f415d3d1c357f6242ce3c8db"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="insert_tree4"><param name="Local" value="linked__list_8h.html#afe6585b2b195138bee10c6d6fd662af3"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="lookup_exact"><param name="Local" value="linked__list_8h.html#abdc2d663510c6c5d559aeaab82eda7bd"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="lookup_lpm"><param name="Local" value="linked__list_8h.html#afbb768f4a8298bf1c98458904170e83c"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="remove_node"><param name="Local" value="linked__list_8h.html#adcb6ddddd0010e932c2c8d7057cb6444"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="remove_node"><param name="Local" value="linked__list_8h.html#a21c5fa86cae714013d79e739c14575c2"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Globals"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
     <UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="globals_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Typedefs"><param name="Local" value="globals_type.html"><param name="ImageNumber" value="11"></OBJECT>
     </UL>
   </UL>
 </UL>

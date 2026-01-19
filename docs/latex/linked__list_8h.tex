@@ -5,21 +5,43 @@
 \item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}}
 \begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{structroute4tree}{route4tree}} structure is used in the creation of a 32 bit binary tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int() \mbox{\hyperlink{linked__list_8h_aba031064c2939b045daae6e376bf9534}{callback}}(struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$, void $\ast$)
+\item 
+typedef int() \mbox{\hyperlink{linked__list_8h_abd85e70fa30638b7c33748ab18bd615a}{callback\+\_\+remove}}(struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$, void $\ast$, void $\ast$)
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_a8039c47f44e43b60d48281b765e115dd}{init\+\_\+tree4}} (void)
 \begin{DoxyCompactList}\small\item\em Initialize a binary tree head entry. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_a8d4559d6f415d3d1c357f6242ce3c8db}{insert\+\_\+tree4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}})
+struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_afe6585b2b195138bee10c6d6fd662af3}{insert\+\_\+tree4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}}, \mbox{\hyperlink{linked__list_8h_aba031064c2939b045daae6e376bf9534}{callback}} cb)
 \begin{DoxyCompactList}\small\item\em This inserts an entry into a binary tree. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_afbb768f4a8298bf1c98458904170e83c}{lookup\+\_\+lpm}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr)
 \begin{DoxyCompactList}\small\item\em This does a longest prefix match against the binary tree. \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8h_abdc2d663510c6c5d559aeaab82eda7bd}{lookup\+\_\+exact}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr)
 \begin{DoxyCompactList}\small\item\em This does an exact match lookup against the tree. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{linked__list_8h_adcb6ddddd0010e932c2c8d7057cb6444}{remove\+\_\+node}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 address, \+\_\+\+\_\+u8 cidr)
+void \mbox{\hyperlink{linked__list_8h_a21c5fa86cae714013d79e739c14575c2}{remove\+\_\+node}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 address, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}}, \mbox{\hyperlink{linked__list_8h_abd85e70fa30638b7c33748ab18bd615a}{callback\+\_\+remove}} cb)
 \begin{DoxyCompactList}\small\item\em This function removes a node from the tree. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{linked__list_8h_ac7cb413164f2ed7b1c62f1840f1eae04}{free\+\_\+tree4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$$\ast$tree)
 \begin{DoxyCompactList}\small\item\em Frees an entire 32-\/bit binary tree using post-\/order traversal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{linked__list_8h_aba031064c2939b045daae6e376bf9534}\label{linked__list_8h_aba031064c2939b045daae6e376bf9534}} 
+\index{linked\_list.h@{linked\_list.h}!callback@{callback}}
+\index{callback@{callback}!linked\_list.h@{linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{callback}{callback}}
+{\footnotesize\ttfamily typedef int() callback(struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$, void $\ast$)}
+
+\mbox{\Hypertarget{linked__list_8h_abd85e70fa30638b7c33748ab18bd615a}\label{linked__list_8h_abd85e70fa30638b7c33748ab18bd615a}} 
+\index{linked\_list.h@{linked\_list.h}!callback\_remove@{callback\_remove}}
+\index{callback\_remove@{callback\_remove}!linked\_list.h@{linked\_list.h}}
+\doxysubsubsection{\texorpdfstring{callback\_remove}{callback\_remove}}
+{\footnotesize\ttfamily typedef int() callback\+\_\+remove(struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$, void $\ast$, void $\ast$)}
+
 
 
 \doxysubsection{Function Documentation}
@@ -62,11 +84,11 @@ Initialize a binary tree head entry.
 \begin{DoxyReturn}{Returns}
 A pointer to the head of a binary tree 
 \end{DoxyReturn}
-\mbox{\Hypertarget{linked__list_8h_a8d4559d6f415d3d1c357f6242ce3c8db}\label{linked__list_8h_a8d4559d6f415d3d1c357f6242ce3c8db}} 
+\mbox{\Hypertarget{linked__list_8h_afe6585b2b195138bee10c6d6fd662af3}\label{linked__list_8h_afe6585b2b195138bee10c6d6fd662af3}} 
 \index{linked\_list.h@{linked\_list.h}!insert\_tree4@{insert\_tree4}}
 \index{insert\_tree4@{insert\_tree4}!linked\_list.h@{linked\_list.h}}
 \doxysubsubsection{\texorpdfstring{insert\_tree4()}{insert\_tree4()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ insert\+\_\+tree4 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ insert\+\_\+tree4 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{linked__list_8h_aba031064c2939b045daae6e376bf9534}{callback}}}]{cb }\end{DoxyParamCaption})}
 
 
 
@@ -81,6 +103,8 @@ Data is a void pointer making this generic and able to store any data in the tre
 \mbox{\texttt{ in}}  & {\em cidr} & An integer representing how many bits of the address to insert into the tree \\
 \hline
 \mbox{\texttt{ in}}  & {\em data} & A void pointer to the data to insert into the tree \\
+\hline
+\mbox{\texttt{ in}}  & {\em cb} & A Function pointer used for inserting data -\/ if NULL the tree data pointer will simply point to the data parameter \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -130,11 +154,11 @@ This function will return at the deepest point in the tree that is matched and h
 \begin{DoxyReturn}{Returns}
 A tree entry at the deepest point possible in the transversal 
 \end{DoxyReturn}
-\mbox{\Hypertarget{linked__list_8h_adcb6ddddd0010e932c2c8d7057cb6444}\label{linked__list_8h_adcb6ddddd0010e932c2c8d7057cb6444}} 
+\mbox{\Hypertarget{linked__list_8h_a21c5fa86cae714013d79e739c14575c2}\label{linked__list_8h_a21c5fa86cae714013d79e739c14575c2}} 
 \index{linked\_list.h@{linked\_list.h}!remove\_node@{remove\_node}}
 \index{remove\_node@{remove\_node}!linked\_list.h@{linked\_list.h}}
 \doxysubsubsection{\texorpdfstring{remove\_node()}{remove\_node()}}
-{\footnotesize\ttfamily void remove\+\_\+node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{address,  }\item[{\+\_\+\+\_\+u8}]{cidr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void remove\+\_\+node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{address,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{linked__list_8h_abd85e70fa30638b7c33748ab18bd615a}{callback\+\_\+remove}}}]{cb }\end{DoxyParamCaption})}
 
 
 
@@ -147,5 +171,9 @@ This function will remove a node from the tree, and all empty parent nodes. If a
 \mbox{\texttt{ in}}  & {\em address} & The address to lookup in the tree -\/ This should be in big endian order \\
 \hline
 \mbox{\texttt{ in}}  & {\em cidr} & The depth to transverse before we start back tracing and freeing \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & If this is set AND callback is set, the callback is used with the node data and the supplied data to determine removal \\
+\hline
+\mbox{\texttt{ in}}  & {\em cb} & If set call the callback removal function with the node data pointer and the supplied data pointer \\
 \hline
 \end{DoxyParams}
