@@ -69,7 +69,7 @@ int main(void)
         }
         inet_ntop(AF_INET, &pfx, prefix_str, INET_ADDRSTRLEN);
         printf("Looking up %s/%d\n", prefix_str, cidr);
-        test_node = lookup_lpm(tree, pfx, cidr);
+        test_node = lookup_lpm(tree, pfx, cidr, NULL, NULL);
         if (test_node && test_node->data) {
             struct data *lookup_test = test_node->data;
             if (lookup_test) {

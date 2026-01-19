@@ -15,7 +15,7 @@ struct route4tree *init_tree4(void)
     return tree;
 }
 
-struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data, callback cb)
+struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, void *data, const callback cb)
 {
     if (!data)
         return NULL;
@@ -64,8 +64,7 @@ struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, 
     return current;
 }
 
-struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr)
-{
+void *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr, void *data, const callback cb) {
     struct route4tree *current = tree;
     for (int i = cidr-1; i >= 0; i--) {
         __u32 bit = (addr >> i)&1;
@@ -84,12 +83,16 @@ struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr)
         if (current->data)
             return current;
     }
-    if (current && current->data)
+    if (current && current->data) {
+        if (cb && data) {
+            return cb(current, data);
+        }
         return current;
+    }
     return NULL;
 }
 
-struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr)
+void *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr, void *data, const callback cb)
 {
     struct route4tree *current = tree;
     for (int i = cidr-1; i >= 0; i--) {
@@ -107,12 +110,16 @@ struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr)
         }
         return NULL;
     }
-    if (current && current->data)
+    if (current && current->data) {
+        if (cb && data) {
+            return cb(current, data);
+        }
         return current;
+    }
     return NULL;
 }
 
-void remove_node(struct route4tree *tree, __u32 address, __u8 cidr, void *data, callback_remove cb)
+void remove_node(struct route4tree *tree, __u32 address, __u8 cidr, void *data, const callback_remove cb)
 {
     // Swap the address to little endian order
     struct route4tree *current = tree;

@@ -18,8 +18,12 @@ struct route4tree {
 /** @def callback
  * @brief This is used for callbacks on insert_tree4 in case of special processing
  */
-typedef int(callback)(struct route4tree *, void *);
-typedef int(callback_remove)(struct route4tree *, void *, void *);
+typedef void*(*callback)(struct route4tree *, void *);
+
+/** @def callback_remove
+ * @brief This is used for tree removal callbacks
+ */
+typedef void*(*callback_remove)(struct route4tree *, void *, void *);
 
 /** @brief Initialize a binary tree head entry
  * @returns A pointer to the head of a binary tree
@@ -46,9 +50,11 @@ struct route4tree *insert_tree4(struct route4tree *tree, __u32 addr, __u8 cidr, 
  * @param[in] tree The head of an initialized binary tree
  * @param[in] addr A 32 bit address to be searched for in the tree
  * @param[in] cidr The maximum number of bits to transverse to in the tree
- * @returns A tree entry at the deepest point possible in the transversal
+ * @param[in] data If set, and if callback is set, this is passed to the callback along with the node
+ * @param[in] cb If set, and if data is set, this is called for more granular data matching
+ * @returns A tree entry at the deepest point possible in the transversal or if using callback the callback result is returned
  */
-struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr);
+void *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr, void *data, callback cb);
 
 /** @brief This does an exact match lookup against the tree
  * @details This function will return the tree structure at the exact match point
@@ -59,7 +65,7 @@ struct route4tree *lookup_lpm(struct route4tree *tree, __u32 addr, __u8 cidr);
  * @param[in] cidr The depth to transverse to in the tree
  * @returns A pointer to the tree entry if matched, or NULL
  */
-struct route4tree *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr);
+void *lookup_exact(struct route4tree *tree, __u32 addr, __u8 cidr, void *data, callback cb);
 
 /** @brief This function removes a node from the tree
  * @details This function will remove a node from the tree, and all empty

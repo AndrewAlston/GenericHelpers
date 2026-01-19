@@ -5,13 +5,13 @@
 \item 
 struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8c_a8039c47f44e43b60d48281b765e115dd}{init\+\_\+tree4}} (void)
 \begin{DoxyCompactList}\small\item\em Initialize a binary tree head entry. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8c_afe6585b2b195138bee10c6d6fd662af3}{insert\+\_\+tree4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}}, \mbox{\hyperlink{linked__list_8h_aba031064c2939b045daae6e376bf9534}{callback}} cb)
+struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8c_acd6a35b710c02097ccf5d0f7ebd410af}{insert\+\_\+tree4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}}, const \mbox{\hyperlink{linked__list_8h_a009950799adec8c3c6b8e96d13b75340}{callback}} cb)
 \begin{DoxyCompactList}\small\item\em This inserts an entry into a binary tree. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8c_afbb768f4a8298bf1c98458904170e83c}{lookup\+\_\+lpm}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr)
+void $\ast$ \mbox{\hyperlink{linked__list_8c_ad29437f48c9622daf687db99ac0174a0}{lookup\+\_\+lpm}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}}, const \mbox{\hyperlink{linked__list_8h_a009950799adec8c3c6b8e96d13b75340}{callback}} cb)
 \begin{DoxyCompactList}\small\item\em This does a longest prefix match against the binary tree. \end{DoxyCompactList}\item 
-struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$ \mbox{\hyperlink{linked__list_8c_abdc2d663510c6c5d559aeaab82eda7bd}{lookup\+\_\+exact}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr)
+void $\ast$ \mbox{\hyperlink{linked__list_8c_a994aef717c6a4e9427d541dd8c09f22c}{lookup\+\_\+exact}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 addr, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}}, const \mbox{\hyperlink{linked__list_8h_a009950799adec8c3c6b8e96d13b75340}{callback}} cb)
 \begin{DoxyCompactList}\small\item\em This does an exact match lookup against the tree. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{linked__list_8c_a21c5fa86cae714013d79e739c14575c2}{remove\+\_\+node}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 address, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}}, \mbox{\hyperlink{linked__list_8h_abd85e70fa30638b7c33748ab18bd615a}{callback\+\_\+remove}} cb)
+void \mbox{\hyperlink{linked__list_8c_a284ff170da1bc4e4d594bc4d349a36cd}{remove\+\_\+node}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$tree, \+\_\+\+\_\+u32 address, \+\_\+\+\_\+u8 cidr, void $\ast$\mbox{\hyperlink{structdata}{data}}, const \mbox{\hyperlink{linked__list_8h_ac4fc83870d151fef70b30763ee82d050}{callback\+\_\+remove}} cb)
 \begin{DoxyCompactList}\small\item\em This function removes a node from the tree. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{linked__list_8c_ac7cb413164f2ed7b1c62f1840f1eae04}{free\+\_\+tree4}} (struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$$\ast$tree)
 \begin{DoxyCompactList}\small\item\em Frees an entire 32-\/bit binary tree using post-\/order traversal. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -57,11 +57,11 @@ Initialize a binary tree head entry.
 \begin{DoxyReturn}{Returns}
 A pointer to the head of a binary tree 
 \end{DoxyReturn}
-\mbox{\Hypertarget{linked__list_8c_afe6585b2b195138bee10c6d6fd662af3}\label{linked__list_8c_afe6585b2b195138bee10c6d6fd662af3}} 
+\mbox{\Hypertarget{linked__list_8c_acd6a35b710c02097ccf5d0f7ebd410af}\label{linked__list_8c_acd6a35b710c02097ccf5d0f7ebd410af}} 
 \index{linked\_list.c@{linked\_list.c}!insert\_tree4@{insert\_tree4}}
 \index{insert\_tree4@{insert\_tree4}!linked\_list.c@{linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{insert\_tree4()}{insert\_tree4()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ insert\+\_\+tree4 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{linked__list_8h_aba031064c2939b045daae6e376bf9534}{callback}}}]{cb }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ insert\+\_\+tree4 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{linked__list_8h_a009950799adec8c3c6b8e96d13b75340}{callback}}}]{cb }\end{DoxyParamCaption})}
 
 
 
@@ -83,11 +83,11 @@ Data is a void pointer making this generic and able to store any data in the tre
 \begin{DoxyReturn}{Returns}
 A \mbox{\hyperlink{structroute4tree}{route4tree}} structure at the inserted position in the tree 
 \end{DoxyReturn}
-\mbox{\Hypertarget{linked__list_8c_abdc2d663510c6c5d559aeaab82eda7bd}\label{linked__list_8c_abdc2d663510c6c5d559aeaab82eda7bd}} 
+\mbox{\Hypertarget{linked__list_8c_a994aef717c6a4e9427d541dd8c09f22c}\label{linked__list_8c_a994aef717c6a4e9427d541dd8c09f22c}} 
 \index{linked\_list.c@{linked\_list.c}!lookup\_exact@{lookup\_exact}}
 \index{lookup\_exact@{lookup\_exact}!linked\_list.c@{linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{lookup\_exact()}{lookup\_exact()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ lookup\+\_\+exact (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void$\ast$ lookup\+\_\+exact (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{linked__list_8h_a009950799adec8c3c6b8e96d13b75340}{callback}}}]{cb }\end{DoxyParamCaption})}
 
 
 
@@ -105,11 +105,11 @@ This function will return the tree structure at the exact match point if it can 
 \begin{DoxyReturn}{Returns}
 A pointer to the tree entry if matched, or NULL 
 \end{DoxyReturn}
-\mbox{\Hypertarget{linked__list_8c_afbb768f4a8298bf1c98458904170e83c}\label{linked__list_8c_afbb768f4a8298bf1c98458904170e83c}} 
+\mbox{\Hypertarget{linked__list_8c_ad29437f48c9622daf687db99ac0174a0}\label{linked__list_8c_ad29437f48c9622daf687db99ac0174a0}} 
 \index{linked\_list.c@{linked\_list.c}!lookup\_lpm@{lookup\_lpm}}
 \index{lookup\_lpm@{lookup\_lpm}!linked\_list.c@{linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{lookup\_lpm()}{lookup\_lpm()}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{structroute4tree}{route4tree}}$\ast$ lookup\+\_\+lpm (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void$\ast$ lookup\+\_\+lpm (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{addr,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{linked__list_8h_a009950799adec8c3c6b8e96d13b75340}{callback}}}]{cb }\end{DoxyParamCaption})}
 
 
 
@@ -123,15 +123,19 @@ This function will return at the deepest point in the tree that is matched and h
 \hline
 \mbox{\texttt{ in}}  & {\em cidr} & The maximum number of bits to transverse to in the tree \\
 \hline
+\mbox{\texttt{ in}}  & {\em data} & If set, and if callback is set, this is passed to the callback along with the node \\
+\hline
+\mbox{\texttt{ in}}  & {\em cb} & If set, and if data is set, this is called for more granular data matching \\
+\hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A tree entry at the deepest point possible in the transversal 
+A tree entry at the deepest point possible in the transversal or if using callback the callback result is returned 
 \end{DoxyReturn}
-\mbox{\Hypertarget{linked__list_8c_a21c5fa86cae714013d79e739c14575c2}\label{linked__list_8c_a21c5fa86cae714013d79e739c14575c2}} 
+\mbox{\Hypertarget{linked__list_8c_a284ff170da1bc4e4d594bc4d349a36cd}\label{linked__list_8c_a284ff170da1bc4e4d594bc4d349a36cd}} 
 \index{linked\_list.c@{linked\_list.c}!remove\_node@{remove\_node}}
 \index{remove\_node@{remove\_node}!linked\_list.c@{linked\_list.c}}
 \doxysubsubsection{\texorpdfstring{remove\_node()}{remove\_node()}}
-{\footnotesize\ttfamily void remove\+\_\+node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{address,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{linked__list_8h_abd85e70fa30638b7c33748ab18bd615a}{callback\+\_\+remove}}}]{cb }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void remove\+\_\+node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structroute4tree}{route4tree}} $\ast$}]{tree,  }\item[{\+\_\+\+\_\+u32}]{address,  }\item[{\+\_\+\+\_\+u8}]{cidr,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{linked__list_8h_ac4fc83870d151fef70b30763ee82d050}{callback\+\_\+remove}}}]{cb }\end{DoxyParamCaption})}
 
 
 

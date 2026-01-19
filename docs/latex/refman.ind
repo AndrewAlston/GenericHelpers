@@ -83,7 +83,7 @@
     \subitem {insert\_tree4}, \hyperpage{21}
     \subitem {lookup\_exact}, \hyperpage{21}
     \subitem {lookup\_lpm}, \hyperpage{22}
-    \subitem {remove\_node}, \hyperpage{22}
+    \subitem {remove\_node}, \hyperpage{23}
   \item {linked\_list.h}, \hyperpage{23}
     \subitem {callback}, \hyperpage{24}
     \subitem {callback\_remove}, \hyperpage{24}
@@ -91,19 +91,19 @@
     \subitem {init\_tree4}, \hyperpage{24}
     \subitem {insert\_tree4}, \hyperpage{25}
     \subitem {lookup\_exact}, \hyperpage{25}
-    \subitem {lookup\_lpm}, \hyperpage{26}
-    \subitem {remove\_node}, \hyperpage{26}
+    \subitem {lookup\_lpm}, \hyperpage{27}
+    \subitem {remove\_node}, \hyperpage{27}
   \item {lookup\_exact}
     \subitem {linked\_list.c}, \hyperpage{21}
     \subitem {linked\_list.h}, \hyperpage{25}
   \item {lookup\_lpm}
     \subitem {linked\_list.c}, \hyperpage{22}
-    \subitem {linked\_list.h}, \hyperpage{26}
+    \subitem {linked\_list.h}, \hyperpage{27}
 
   \indexspace
 
   \item {main}
-    \subitem {test\_linked\_list.c}, \hyperpage{27}
+    \subitem {test\_linked\_list.c}, \hyperpage{28}
   \item {mem\_to\_msg}
     \subitem {decode\_helpers.c}, \hyperpage{14}
     \subitem {decode\_helpers.h}, \hyperpage{18}
@@ -134,10 +134,10 @@
   \item {read\_bgp\_prefix}
     \subitem {decode\_helpers.c}, \hyperpage{15}
     \subitem {decode\_helpers.h}, \hyperpage{19}
-  \item {README.md}, \hyperpage{27}
+  \item {README.md}, \hyperpage{28}
   \item {remove\_node}
-    \subitem {linked\_list.c}, \hyperpage{22}
-    \subitem {linked\_list.h}, \hyperpage{26}
+    \subitem {linked\_list.c}, \hyperpage{23}
+    \subitem {linked\_list.h}, \hyperpage{27}
   \item {result}
     \subitem {proto\_msg}, \hyperpage{9}
   \item {reverse\_array\_10}
@@ -160,8 +160,8 @@
   \indexspace
 
   \item {test\_linked\_list.c}
-    \subitem {main}, \hyperpage{27}
-  \item {tests/test\_linked\_list.c}, \hyperpage{27}
+    \subitem {main}, \hyperpage{28}
+  \item {tests/test\_linked\_list.c}, \hyperpage{28}
 
   \indexspace
 
